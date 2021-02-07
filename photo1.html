@@ -9,10 +9,14 @@ img {
 
 a {
   color: white;
-}
+  margin: 20px;
+  -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+  transition: color 1s; /* For modern browsers */
+    }
 
 a:hover {
-  background-color: black;
+  background-color: white;
+  color: black;
 }
 
 /* Style buttons */
@@ -35,7 +39,7 @@ a:hover {
 
 <html>
  <body>
-  <button class="btn" onclick="window.location.href='https://eastsidelakerfan.github.io/';"><i class="fa fa-home"></i> Home</button>
+  <p><a href="https://eastsidelakerfan.github.io/">Home</a></p>
 
   <p> &nbsp; </p>
   <p> &nbsp; </p>

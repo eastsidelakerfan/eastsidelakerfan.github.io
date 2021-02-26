@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript">
-var i1 = window.prompt("Enter a Last Name:");
-var i2 = window.prompt("Enter a Country:");
-var i3 = window.prompt("Enter a Year:");
-var i4 = window.prompt("Enter a Year:");
-var i5 = window.prompt("Enter a Number:");
-var i6 = window.prompt("Enter Would or Would Not");
-var i7 = window.prompt("Enter a Host Name:");
-var i8 = window.prompt("Enter an Adjective:");
-var i9 = window.prompt("Enter an Adjective:");
-var i10 = window.prompt("Enter a Plural Noun:");
-var i11 = window.prompt("Enter a Plural Noun:");
-var i12 = window.prompt("Enter a Location:");
-var i13 = window.prompt("Enter an Origin (ie. American, Swedish, etc):");
-var i14 = window.prompt("Enter a Subject Matter:");
-var i15 = window.prompt("Enter a Subject Matter:");
-
-
-  document.write("Jacob " + i1 + "<br><br> Washington, DC, " + i2 + "<br> 1 reference • Member since " + i3 + "<br><br> Dec " + i4 + " <br>" + i5 + "  nights <br> Confirmed Stay - " + i6 + "  Stay With " + i7 + "  Again <br><br>" + i7 + "  was very " + i8 + "  and " + i9 + " . He gave us " + i10 + "  and cool " + i11 + "  to check out in " + i12 + " . He also had some great insights on " + i13 + "  " + i14 + "  and " + i15 + " . I would definitely stay with him again!")
-</script>
+  <meta charset="utf-8">
   <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
+  <canvas id="confetti"></canvas>
+  <script src="confetti.js"></script>
+  <p id="demo" onclick="myFunction()">Click me.</p>
+
+
+
+<a href='linkhref.html' id='mylink'>click me</a>
+
+<script type="text/javascript">
+
+var myLink = document.getElementById('mylink');
+
+myLink.onclick = function(){
+
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "confetti.js."; 
+    document.getElementsByTagName("head")[0].appendChild(script);
+    return false;
+
+}
+
+
+</script>
 
 </body>
 </html>
-
-
-
-

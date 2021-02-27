@@ -30,11 +30,49 @@ function randomUrl() {
 </script>
 
 <style>
+
+
+
+a.top {
+  color: lightgray;
+  margin: 1px;
+  -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+  transition: color 1s; /* For modern browsers */
+    }
+
+a.top:hover {
+  background-color: white;
+  color: orange;
+}
+
+
+p {
+  color: lightgray;
+  margin: 1px;
+  -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+  transition: color 1s; /* For modern browsers */
+    }
+
+p:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black;
 }
+
+
 
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -69,14 +107,14 @@ img {
 
 a {
   color: white;
-  margin: 20px;
+  margin: 10px;
   -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
   transition: color 1s; /* For modern browsers */
     }
 
 a:hover {
   background-color: white;
-  color: black;
+  color: orange;
 }
 
 /* Style buttons */
@@ -117,10 +155,14 @@ a:hover {
 <p> <br> </p>
 
 
-<div class="tooltip">Answer
+<div class="tooltip" >Answer
   <span class="tooltiptext">Ron Artest</span>
 </div>
 
+<p> <br> </p>
+<p> <br> </p>
+<p> <br> </p>
+<p> <br> </p>
 <p> <br> </p>
 <p> <br> </p>
 <p> Did you get it right? </p>
@@ -129,6 +171,10 @@ a:hover {
 <p> <br> </p>
 <p> <br> </p>
 <p> <br> </p>
+<p><a href="https://drewwolin.com/nba-name-that-player.html" class="top">Play again</a> <br>
+<a href="https://drewwolin.com/" class="top">Go home</a></p>
+
+
 </body>
 </html>
 

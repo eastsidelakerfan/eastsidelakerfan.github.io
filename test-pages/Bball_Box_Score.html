@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+<script>
+
+var urlArray = [
+    "http://www.google.com",
+    "http://www.yahoo.com",
+    "http://www.stackoverflow.com"
+];
+
+function randomUrl() {
+    var randomNumber = Math.floor(Math.random() * urlArray.length);
+    var newUrl = urlArray[randomNumber];
+    window.location.href = newUrl;
+}
+	
+
+
+
+//confetti
+
+
+
+
+
+</script>
+
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: 60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Name that Player</h1>
+
+
+<img src="https://user-images.githubusercontent.com/54191400/108927284-fad75300-760d-11eb-87de-d0c89d0e960c.png" alt="Girl in a jacket" width="800">
+<p> <br> </p>
+<div class="tooltip">Answer
+  <span class="tooltiptext">Ron Artest</span>
+</div>
+
+<p> <br> </p>
+<p> <br> </p>
+<p> Did you get it right? </p>
+<p> Yes </p>
+<p> No </p>
+</body>
+</html>
+

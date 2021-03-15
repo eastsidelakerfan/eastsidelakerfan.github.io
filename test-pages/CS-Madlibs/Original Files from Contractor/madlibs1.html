@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+
+  <meta property="og:image"
+    content="https://user-images.githubusercontent.com/54191400/107107247-01885c80-67fe-11eb-9a68-bef58ecf7818.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+
+  <meta name="author" content="Drew">
+  <meta name="description" content="Between 2016 - 2018, I hosted over 100 travelers in my living room in NYC.
+After our guest's stay, we would write references for one another on Couchsurfing.com.
+Here are our references, turned into a Madlibs game, which we loved to play with our guests. 
+We hope you enjoy!">
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLJE18MRKD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XLJE18MRKD');
+  </script>
+  <style>
+    ul {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li {
+      display: inline-block;
+    }
+
+    ul li:hover {
+      background: #999;
+    }
+
+    ul li:hover ul {
+      display: block;
+    }
+
+    ul li ul {
+      position: absolute;
+      width: 200px;
+      display: none;
+    }
+
+    ul li ul li {
+      background: #FFFFFF;
+      display: block;
+    }
+
+    ul li ul li a {
+      display: block !important;
+    }
+
+    ul li ul li:hover {
+      background: #999;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      /* no underline */
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <title></title>
+
+  <link rel="icon"
+    href="https://user-images.githubusercontent.com/54191400/107107247-01885c80-67fe-11eb-9a68-bef58ecf7818.png">
+
+</head>
+
+<body>
+
+  <p>
+  <ul>
+    <li>
+      <a href="#">What next? &raquo;</a>
+      <ul>
+        <li>&nbsp;</li>
+        <li><a href="https://drewwolin.com/madlibs1.html">Play again!</a></li>
+        <li>&nbsp;</li>
+        <li><a href="https://drewwolin.com/madlibs2.html">Play a different entry</a></li>
+        <li>&nbsp;</li>
+        <li><a href="https://drewwolin.com">Visit drewwolin.com homepage</a></li>
+        <li>&nbsp;</li>
+      </ul>
+    </li>
+  </ul>
+  </p>
+  <p>&nbsp;</p>
+
+  <form id="regForm" action="">
+
+    <h1>Register:</h1>
+
+    <!-- One "tab" for each step in the form: -->
+
+    <div class="tab">Enter a Host Name (Who will be the Couchsurfing host in your story?
+      <p><input placeholder="Host Name" id="host_name"></p>
+    </div>
+    <div class="tab">Enter a Last Name (It can be any last name):
+      <p><input placeholder="Last Name" id="last_name"></p>
+    </div>
+
+    <div class="tab">Enter an Adjective:
+      <p><input placeholder="Adjective" id="adj"></p>
+    </div>
+
+    <div class="tab">Enter a Plural Noun:
+      <p><input placeholder="Plural Noun" id="Plural"></p>
+    </div>
+
+    <div class="tab">Enter an Origin (ie. American, Swedish, etc):
+      <p><input placeholder="Origin" id="origin"></p>
+    </div>
+
+    <div class="tab">Enter a Subject Matter:
+      <p><input placeholder="Subject Matter" id="subject"></p>
+    </div>
+
+    <div class="tab">Enter a Subject Matter:
+      <p><input placeholder="Subject Matter" id="subject1"></p>
+    </div>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" class="next" onclick="nextPrev(1)">Next</button>
+      </div>
+    </div>
+
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+
+  </form>
+  <script>
+
+
+
+
+    function showData() {
+      var i7 = document.getElementById("host_name").value;
+      var i1 = document.getElementById("last_name").value;
+      var i8 = document.getElementById("adj").value;
+      var i10 = document.getElementById("Plural").value;
+      var i13 = document.getElementById("origin").value;
+      var i14 = document.getElementById("subject").value;
+      var i15 = document.getElementById("subject1").value;
+
+      var l1 = "Jacob " + i1;
+      var l2 = "<br><br> Washington, DC, USA";
+      var l3 = "<br> 1 reference • Member since 2018";
+      var l4 = "<br><br> Dec 2018 - ";
+      var l5 = "2 nights <br>";
+      var l6 = "Confirmed Stay - Would Stay With " + i7 + " Again <br><br>";
+      var l7 = i7 + " was very " + i8 + ". He gave us " + i10 + " and cool recommendations of what to check out in NYC. He" +
+        "also had some great insights on " + i13 + " " + i14 + " and " + i15 + ". I would definitely stay with him again!";
+
+      var header = "Thank you for creating a Couchsurfing Reference Madlibs! <br> <br>Here's what you wrote. <br><br>If you" +
+        "see null values, please refresh your page.<br><br><br><br><br>";
+
+      l1 = l1.fontsize("12").fontcolor("black").bold();
+      l2 = l2.fontsize("4").fontcolor("black");
+      l3 = l3.fontsize("2").fontcolor("gray");
+      l4 = l4.fontsize("4").fontcolor("gray");
+      l5 = l5.fontsize("4").fontcolor("gray");
+      l6 = l6.fontsize("4").fontcolor("green");
+      l7 = l7.fontsize("4").fontcolor("black");
+      document.write(header + l1 + l2 + l3 + l4 + l5 + l6 + l7);
+    }
+  </script>
+  <title></title>
+
+  <link rel="icon"
+    href="https://user-images.githubusercontent.com/54191400/107107247-01885c80-67fe-11eb-9a68-bef58ecf7818.png">
+
+  </head>
+
+  <body>
+
+    <p> <br> </p>
+    <p> <br> </p>
+    <p> <br> </p>
+    <p> <br> </p>
+    <p> <br> </p>
+    <p> <br> </p>
+
+
+    <p>&nbsp;</p>
+    <script src="madlibs.js"></script>
+  </body>
+
+</html>

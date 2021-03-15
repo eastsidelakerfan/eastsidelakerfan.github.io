@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+
+  <meta property="og:image"
+    content="https://user-images.githubusercontent.com/54191400/107107247-01885c80-67fe-11eb-9a68-bef58ecf7818.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+
+  <meta name="author" content="Drew">
+  <meta name="description" content="Between 2016 - 2018, I hosted over 100 travelers in my living room in NYC.
+After our guest's stay, we would write references for one another on Couchsurfing.com.
+Here are our references, turned into a Madlibs game, which we loved to play with our guests. 
+We hope you enjoy!">
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLJE18MRKD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XLJE18MRKD');
+  </script>
+  <style>
+    body {
+      margin: 88px;
+      padding: 15px;
+      background: #ebebeb;
+      margin-top: 0;
+      font-family: Raleway;
+    }
+
+    ul {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li {
+      display: inline-block;
+    }
+
+    .header {
+      font-family: sans-serif;
+      text-align: left !important;
+      margin: 0px;
+    }
+
+    .header-bottom {
+      font-weight: 200;
+      font-family: -webkit-pictograph;
+    }
+
+    ul li:hover {
+      background: #999;
+    }
+
+    ul li:hover ul {
+      display: block;
+    }
+
+    ul li ul {
+      position: absolute;
+      width: 200px;
+      display: none;
+    }
+
+    ul li ul li {
+      background: #FFFFFF;
+      display: block;
+    }
+
+    ul li ul li a {
+      display: block !important;
+    }
+
+    ul li ul li:hover {
+      background: #999;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      /* no underline */
+    }
+
+
+
+    #regForm {
+      background-color: #ffffff;
+      margin: 100px auto;
+      font-family: Raleway;
+      padding: 40px;
+      width: 94%;
+      min-width: 300px;
+      border: 1px solid #ebebeb;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      font-size: 17px;
+      font-family: Raleway;
+      border: 1px solid #aaaaaa;
+      box-sizing: border-box;
+    }
+
+    /* Mark input boxes that gets an error on validation: */
+    input.invalid {
+      background-color: #ffdddd;
+    }
+
+    button {
+      background-color: darkblue;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 17px;
+      font-family: Raleway;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    body {
+      margin: 88px !important;
+      background: white !important;
+      padding: 15px !important;
+      margin-top: 0 !important;
+      font-family: Raleway !important;
+    }
+  </style>
+  <title></title>
+
+  <link rel="icon"
+    href="https://user-images.githubusercontent.com/54191400/107107247-01885c80-67fe-11eb-9a68-bef58ecf7818.png">
+
+</head>
+
+<body>
+
+  <p>
+  <ul>
+    <li>
+      <a href="#">What next? &raquo;</a>
+      <ul>
+        <li>&nbsp;</li>
+        <li><a href="https://drewwolin.com/madlibs1.html">Play again!</a></li>
+        <li>&nbsp;</li>
+        <li><a href="https://drewwolin.com/madlibs2.html">Play a different entry</a></li>
+        <li>&nbsp;</li>
+        <li><a href="https://drewwolin.com">Visit drewwolin.com homepage</a></li>
+        <li>&nbsp;</li>
+      </ul>
+    </li>
+  </ul>
+  </p>
+  <p>&nbsp;</p>
+
+  <form id="regForm" action="" onsubmit="showData()">
+
+    <h1>Enter Details</h1>
+
+    <!-- One "tab" for each step in the form: -->
+    <div>
+      <label>Enter a Host Name (Who will be the Couchsurfing host in your story?
+      </label>
+      <p><input placeholder="Host Name" id="host_name"></p>
+    </div>
+    <label>Enter a Last Name (It can be any last name):
+    </label>
+    <p><input placeholder="Last Name" id="last_name"></p>
+    </div>
+    <div>
+      <label>Enter an Adjective:
+      </label>
+      <p><input placeholder="Adjective" id="adj"></p>
+    </div>
+    <div>
+      <label>Enter a Plural Noun:
+      </label>
+      <p><input placeholder="Plural Noun" id="Plural"></p>
+    </div>
+    <div>
+      <label>Enter an Origin (ie. American, Swedish, etc):
+      </label>
+      <p><input placeholder="Origin" id="origin"></p>
+    </div>
+    <div>
+      <label>Enter a Subject Matter:
+      </label>
+      <p><input placeholder="Subject Matter" id="subject"></p>
+    </div>
+    <div>
+      <label>Enter a Subject Matter:
+      </label>
+      <p><input placeholder="Subject Matter" id="subject1"></p>
+    </div>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="submit" id="submit-me" class="next">Submit</button>
+      </div>
+    </div>
+
+
+
+  </form>
+  <script>
+    function showData() {
+      var i7 = document.getElementById("host_name").value;
+      var i1 = document.getElementById("last_name").value;
+      var i8 = document.getElementById("adj").value;
+      var i10 = document.getElementById("Plural").value;
+      var i13 = document.getElementById("origin").value;
+      var i14 = document.getElementById("subject").value;
+      var i15 = document.getElementById("subject1").value;
+
+      var l1 = "<h1 class='header'>Jacob " + i1 + "</h1>";
+      var l2 = "<br><br> Washington, DC, USA";
+      var l3 = "<br> 1 reference • Member since 2018";
+      var l4 = "<br><br> Dec 2018 - ";
+      var l5 = "2 nights <br>";
+      var l6 = "Confirmed Stay - Would Stay With " + i7 + " Again <br><br>";
+      var l7 = "<h4 class='header-bottom'>" + i7 + " was very " + i8 + ". He gave us " + i10 + " and cool recommendations of what to check out in NYC. He" +
+        "also had some great insights on " + i13 + " " + i14 + " and " + i15 + ". I would definitely stay with him again!</h4>";
+
+      var header = "<h3>Thank you for creating a Couchsurfing Reference Madlibs! <br> <br>Here's what you wrote. <br><br>If you" +
+        "see null values, please refresh your page.<br></h3>";
+
+      // l1 = l1.fontsize("12").fontcolor("black").bold();
+      l2 = l2.fontsize("4").fontcolor("black");
+      l3 = l3.fontsize("2").fontcolor("gray");
+      l4 = l4.fontsize("4").fontcolor("gray");
+      l5 = l5.fontsize("4").fontcolor("gray");
+      l6 = l6.fontsize("4").fontcolor("green");
+      var data = header + l1 + l2 + l3 + l4 + l5 + l6 + l7;
+      document.getElementsByTagName('body')[0].innerHTML = data;
+      var body = document.body;
+      body.classList.add("white-class");
+    }
+  </script>
+  <title></title>
+
+  <link rel="icon"
+    href="https://user-images.githubusercontent.com/54191400/107107247-01885c80-67fe-11eb-9a68-bef58ecf7818.png">
+
+  </head>
+
+  <body>
+
+    <p> <br> </p>
+    <p> <br> </p>
+    <p> <br> </p>
+    <p> <br> </p>
+    <p> <br> </p>
+    <p> <br> </p>
+
+
+    <p>&nbsp;</p>
+  </body>
+
+</html>

@@ -12,6 +12,8 @@
     Here are our references, turned into a Madlibs game, which we loved to play with our guests.
     We hope you enjoy!">
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLJE18MRKD"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -143,28 +145,29 @@
       </p>
       <p>&nbsp;</p>
       <form id="regForm" action="">
-        <h1>Register:</h1>
+        <h1></h1>
+
         <!-- One "tab" for each step in the form: -->
         <div class="tab">Enter a Host Name (Who will be the Couchsurfing host in your story?
-          <p><input onkeyup="enter()" placeholder="Host Name" id="host_name"></p>
+          <p><input onkeyup="enter()" placeholder="Host Name" id="host_name" autofocus></p>
         </div>
         <div class="tab">Enter a Last Name (It can be any last name):
-          <p><input onkeyup="enter()" placeholder="Last Name" id="last_name"></p>
+          <p><input onkeyup="enter()" placeholder="Last Name" id="last_name" autofocus ></p>
         </div>
         <div class="tab">Enter an Adjective:
-          <p><input onkeyup="enter()" placeholder="Adjective" id="adj"></p>
+          <p><input onkeyup="enter()" placeholder="Adjective" id="adj" autofocus></p>
         </div>
         <div class="tab">Enter a Plural Noun:
-          <p><input onkeyup="enter()" placeholder="Plural Noun" id="Plural"></p>
+          <p><input onkeyup="enter()" placeholder="Plural Noun" id="Plural" autofocus></p>
         </div>
         <div class="tab">Enter an Origin (ie. American, Swedish, etc):
-          <p><input onkeyup="enter()" placeholder="Origin" id="origin"></p>
+          <p><input onkeyup="enter()" placeholder="Origin" id="origin" autofocus></p>
         </div>
         <div class="tab">Enter a Subject Matter:
-          <p><input onkeyup="enter()" placeholder="Subject Matter" id="subject"></p>
+          <p><input onkeyup="enter()" placeholder="Subject Matter" id="subject" autofocus></p>
         </div>
         <div class="tab">Enter a Subject Matter:
-          <p><input onkeyup="enter()" placeholder="Subject Matter" id="subject1"></p>
+          <p><input onkeyup="enter()" placeholder="Subject Matter" id="subject1" autofocus></p>
         </div>
         <div style="overflow:auto;">
           <div style="float:right;">
@@ -183,6 +186,22 @@
           <span class="step"></span>
         </div>
       </form>
+      <script>
+        $('body').on('keyup', function(e) {
+   if(e.keyCode == 13) { // when Enter key is pressed trigger click event for first button 
+      $("#host_name").focus();
+        $("#last_name").focus();              
+        $("#adj").focus(); 
+        $("#Plural").focus(); 
+        $("#origin").focus(); 
+        $("#subject").focus(); 
+        $("#subject1").focus(); 
+   }
+});
+      $(document).ready(function() {
+        $("#host_name").focus(); 
+      });
+    </script>
       <script>
       function showData() {
       var i7 = document.getElementById("host_name").value;
@@ -301,3 +320,4 @@
         <p>&nbsp;</p>
       </body>
     </html>
+    

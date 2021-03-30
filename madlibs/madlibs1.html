@@ -7,6 +7,7 @@
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="1024">
     <meta name="author" content="Drew">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Between 2016 - 2018, I hosted over 100 travelers in my living room in NYC.
     After our guest's stay, we would write references for one another on Couchsurfing.com.
     Here are our references, turned into a Madlibs game, which we loved to play with our guests.
@@ -67,6 +68,7 @@
     width: 70%;
     min-width: 300px;
     border: 1px solid #ebebeb;
+    box-sizing: border-box;
     }
     h1 {
     text-align: center;
@@ -120,6 +122,11 @@
     .step.finish {
     background-color: darkblue;
     }
+    @media(max-width:768px){
+      input{
+        font-size: 16px!important;
+      }
+    }
     </style>
     <title></title>
     <link rel="icon"
@@ -129,7 +136,7 @@
       <div id="result"></div>
       <p>&nbsp;</p>
       <form id="regForm" action="">
-        <h1> </h1>
+        <h1>Register:</h1>
         <!-- One "tab" for each step in the form: -->
         <div class="tab">Enter a Host Name (Who will be the Couchsurfing host in your story?
           <p><input onkeyup="enter()" placeholder="Host Name" id="host_name" autofocus></p>
@@ -171,7 +178,6 @@
       </form>
       <p>
         <ul id="whats-next" style="display: none">
-          <p><br><br><br><br></p>
           <li>
             <a href="#">What next? &raquo;</a>
             <ul>
@@ -218,8 +224,9 @@
       var l5 = "2 nights <br>";
       var l6 = "Confirmed Stay - Would Stay With " + i7 + " Again <br><br>";
       var l7 = i7 + " was very " + i8 + ". He gave us " + i10 + " and cool recommendations of what to check out in NYC. He" +
-      " also had some great insights on " + i13 + " " + i14 + " and " + i15 + ". I would definitely stay with him again!";
-      var header = "Thank you for creating a Couchsurfing Reference Madlibs! <br> <br>Here's the reference Jacob wrote after his 2018 stay in NYC. <br><br><br><br><br>";
+      "also had some great insights on " + i13 + " " + i14 + " and " + i15 + ". I would definitely stay with him again!";
+      var header = "Thank you for creating a Couchsurfing Reference Madlibs! <br> <br>Here's what you wrote. <br><br>If you" +
+      "see null values, please refresh your page.<br><br><br><br><br>";
       l1 = l1.fontsize("12").fontcolor("black").bold();
       l2 = l2.fontsize("4").fontcolor("black");
       l3 = l3.fontsize("2").fontcolor("gray");

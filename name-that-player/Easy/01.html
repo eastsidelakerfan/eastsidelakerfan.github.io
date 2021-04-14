@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NBA Name that Player</title>
+
+
+<script>
+
+var urlArray = [
+    "https://drewwolin.com/name-that-player/01.html",
+    "https://drewwolin.com/name-that-player/02.html",
+    "https://drewwolin.com/name-that-player/03.html",
+    "https://drewwolin.com/name-that-player/04.html",
+    "https://drewwolin.com/name-that-player/05.html",
+	"https://drewwolin.com/name-that-player/06.html",
+	"https://drewwolin.com/name-that-player/07.html",
+	"https://drewwolin.com/name-that-player/08.html",
+	"https://drewwolin.com/name-that-player/09.html",
+	"https://drewwolin.com/name-that-player/10.html"
+
+];
+
+function randomUrl() {
+    var randomNumber = Math.floor(Math.random() * urlArray.length);
+    var newUrl = urlArray[randomNumber];
+    window.location.href = newUrl;
+}
+	
+
+
+
+//confetti
+
+
+
+
+
+</script>
+
+<style>
+
+
+
+a.top {
+  color: lightgray;
+  margin: 1px;
+  -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+  transition: color 1s; /* For modern browsers */
+    }
+
+a.top:hover {
+  background-color: white;
+  color: black;
+}
+
+
+p {
+  color: lightgray;
+  margin: 1px;
+  -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+  transition: color 1s; /* For modern browsers */
+    }
+
+p:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: 60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+
+<style type="text/css">
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: lightgray;
+  margin: 10px;
+  -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+  transition: color 1s; /* For modern browsers */
+    }
+
+a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Style buttons */
+.btn {
+  background-color: White;
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: Black;
+}
+
+  body{
+    padding:5px;
+    margin: 20px auto;
+
+  }
+
+</style>
+<link rel="icon" href="https://user-images.githubusercontent.com/54191400/107107247-01885c80-67fe-11eb-9a68-bef58ecf7818.png">
+</head>
+<body>
+
+<p><a href="https://drewwolin.com/" target="_self">Home</a>
+	<p> <br> </p>
+
+<h1 style="text-align: center;"> NBA: Name that Player</h1>
+<p>&nbsp;</p>
+
+
+<img src="https://user-images.githubusercontent.com/54191400/108927284-fad75300-760d-11eb-87de-d0c89d0e960c.png" alt="Girl in a jacket" width="1000" class="center">
+<p> <br> </p>
+<p> <br> </p>
+
+
+<div class="tooltip" >Answer
+  <span class="tooltiptext">Ron Artest</span>
+</div>
+<p> <br> </p>
+<p> <br> </p>
+<a href="#" onclick="randomUrl();" target="_self" class="top" >Play again</a>
+
+</body>
+</html>
+

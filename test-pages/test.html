@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<!-- #######  THIS IS A COMMENT - Visible only in the source editor #########-->
-<html>
-
 <head>
-<!-- Test out things to put in the header, here -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLJE18MRKD"></script>
@@ -14,139 +9,302 @@
 
   gtag('config', 'G-XLJE18MRKD');
 </script>
-
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
+
+
+<style>
+/*below is for the photo slide show for the book*/
+
 body {
-  font-family: 'Courier New', monospace;
-}
-
-
-img{
-    display: none
-}
-
-h1.one:hover + img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    ;
-}
-
-
-div a {
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-  padding: 15px;
-  display:inline-block;
-}
-ul {
-  display: inline;
+  font-family: Arial;
   margin: 0;
-  padding: 0;
 }
-ul li {display: inline-block;}
-ul li:hover {background: #999;}
-ul li:hover ul {display: block;}
 
-ul li ul {
-  position: absolute;
-  width: 200px;
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
   display: none;
 }
-ul li ul li { 
-  background: #FFFFFF; 
-  display: block; 
-}
-ul li ul li a {display:block !important;} 
-ul li ul li:hover {background: #999;}
 
-a {text-decoration: none; }
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: 50;
+  padding: 16px;
+  margin-top: -50px;
+  color: brown;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Preview columns side by side */
+.column {
+  float: left;
+  width: 4.2%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/*This is the end of the photo slide show for the book*/
+
+
+
+
+
+
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 a {
+  color: white;
+  margin: 20px;
+  -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+  transition: color 1s; /* For modern browsers */
+    }
+
+a:hover {
+  background-color: white;
   color: black;
-  text-decoration: none; /* no underline */
+}
+
+/* Style buttons */
+.btn {
+  background-color: White;
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: Black;
 }
 
 </style>
-
 <link rel="icon" href="https://user-images.githubusercontent.com/54191400/107107247-01885c80-67fe-11eb-9a68-bef58ecf7818.png">
 
 </head>
 
-<body>
+<html>
+ <body>
+  <p style="text-align: left;"><a href="https://drewwolin.com/">Home</a>  <a href="https://drewwolin.com/photos/03.html"> &larr; Previous </a>
 
-<p>&nbsp;</p>
-<h1 style="text-align: center;" class="one">Drew Wolin</h1>
-<img src="https://user-images.githubusercontent.com/54191400/107107247-01885c80-67fe-11eb-9a68-bef58ecf7818.png"/>
-<p style="text-align: center;"><em>Thank you for visiting.&nbsp;Welcome.</em>&nbsp;</p>
-<p style="font-size: 1.5em;">&nbsp;</p>
-<p style="font-size: 1.5em;">&nbsp;</p>
+<h1 style="text-align:center; color:orange"> </h1>
+  <p> &nbsp; </p>
+  <p>&nbsp;</p>
 
-<p><ul>
-    <li>
-      <a href="#">Games and Creative Projects &raquo;</a>
-      <ul>
-        <li>&nbsp;</li>
-        <li><a href="https://drewwolin.com/madlibs1.html">1. CouchSurfing Madlibs</a></li>
-        <li>&nbsp;</li>
-        <li><a href="https://drewwolin.com/nba-name-that-player-1.html">2. Name that Player (NBA)</a></li>
-        <li>&nbsp;</li>
-        <li><a href="https://drive.google.com/file/d/1YhOD-aFt4jbfB7eGBQcfSWD_ckQsbsb-/view?usp=sharing">3. the Adventures of Djembe Drew, pt. 1</a></li>
-        <li>&nbsp;</li>
-      </ul>
-    </li>
-  </ul></p>
-<p>&nbsp;</p>
-<p><ul>
-    <li>
-      <a href="#">Photos &raquo;</a>
-      <ul>
-        <li>&nbsp;</li>
-        <li><a href="https://eastsidelakerfan.github.io/photo1.html">Photo 1</a></li>
-        <li>&nbsp;</li>
-        <li><a href="https://eastsidelakerfan.github.io/photo2.html">Photo 2</a></li>
-        <li>&nbsp;</li>
-        <li><a href="https://eastsidelakerfan.github.io/photo3.html">Photo 3</a></li>
-        <li>&nbsp;</li>
-        <li>&nbsp;</li>
-      </ul>
-    </li>
-  </ul></p>
-<p>&nbsp;</p>
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+</p>
 
 
 
-</body>
+
+<div class="container">
+
+  <div class="mySlides"> <div class="numbertext">1/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116818729-d2eafb00-ab3a-11eb-80b3-d130152d3c3d.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">2/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797421-9922e180-aab3-11eb-9544-6d4cd35987aa.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">3/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797422-9922e180-aab3-11eb-8bad-5fdd7b0f0df6.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">4/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797423-9922e180-aab3-11eb-8142-e25f9e3d0849.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">5/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797424-9922e180-aab3-11eb-91b2-da1076a30a3f.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">6/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797425-99bb7800-aab3-11eb-8fb9-c8eb9f874502.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">7/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797426-99bb7800-aab3-11eb-9884-87c32ef32fcf.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">8/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797427-99bb7800-aab3-11eb-8a9f-b58a50c7bf15.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">9/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797428-9a540e80-aab3-11eb-9d5f-d6e540d40efb.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">10/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797429-9a540e80-aab3-11eb-8896-e9875175c217.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">11/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797430-9a540e80-aab3-11eb-9fa0-06c8e7185373.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">12/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797431-9aeca500-aab3-11eb-8f0f-e28fc36553b7.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">13/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797432-9aeca500-aab3-11eb-8e49-ca84fc0aa5fc.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">14/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797433-9aeca500-aab3-11eb-905c-a4abaa2ef690.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">15/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797434-9b853b80-aab3-11eb-910b-f7851e85c8f7.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">16/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797435-9b853b80-aab3-11eb-9142-f816383259bc.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">17/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797436-9b853b80-aab3-11eb-8c5f-d65bf4f1d17d.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">18/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797405-8c05f280-aab3-11eb-87ed-b773d31d2fa1.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">19/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797406-8c9e8900-aab3-11eb-9405-f9bec95d1c4e.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">20/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797407-8d371f80-aab3-11eb-82d7-7f65155f6de6.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">21/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797408-8d371f80-aab3-11eb-9193-161cc9c24cd3.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">22/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797410-8dcfb600-aab3-11eb-8856-6aa84809001f.png" style="height:500"></div>
+  <div class="mySlides"> <div class="numbertext">23/ 23</div><img src="https://user-images.githubusercontent.com/54191400/116797400-7c86a980-aab3-11eb-9a2d-6c93867b3c8f.png" style="height:500"></div>
+
+
+
+
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+
+
+
+
+
+  <div class="row">
+    
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116818729-d2eafb00-ab3a-11eb-80b3-d130152d3c3d.png" style="width:40" onclick="currentSlide(1)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797421-9922e180-aab3-11eb-9544-6d4cd35987aa.png" style="width:40" onclick="currentSlide(2)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797422-9922e180-aab3-11eb-8bad-5fdd7b0f0df6.png" style="width:40" onclick="currentSlide(3)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797423-9922e180-aab3-11eb-8142-e25f9e3d0849.png" style="width:40" onclick="currentSlide(4)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797424-9922e180-aab3-11eb-91b2-da1076a30a3f.png" style="width:40" onclick="currentSlide(5)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797425-99bb7800-aab3-11eb-8fb9-c8eb9f874502.png" style="width:40" onclick="currentSlide(6)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797426-99bb7800-aab3-11eb-9884-87c32ef32fcf.png" style="width:40" onclick="currentSlide(7)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797427-99bb7800-aab3-11eb-8a9f-b58a50c7bf15.png" style="width:40" onclick="currentSlide(8)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797428-9a540e80-aab3-11eb-9d5f-d6e540d40efb.png" style="width:40" onclick="currentSlide(9)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797429-9a540e80-aab3-11eb-8896-e9875175c217.png" style="width:40" onclick="currentSlide(10)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797430-9a540e80-aab3-11eb-9fa0-06c8e7185373.png" style="width:40" onclick="currentSlide(11)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797431-9aeca500-aab3-11eb-8f0f-e28fc36553b7.png" style="width:40" onclick="currentSlide(12)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797432-9aeca500-aab3-11eb-8e49-ca84fc0aa5fc.png" style="width:40" onclick="currentSlide(13)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797433-9aeca500-aab3-11eb-905c-a4abaa2ef690.png" style="width:40" onclick="currentSlide(14)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797434-9b853b80-aab3-11eb-910b-f7851e85c8f7.png" style="width:40" onclick="currentSlide(15)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797435-9b853b80-aab3-11eb-9142-f816383259bc.png" style="width:40" onclick="currentSlide(16)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797436-9b853b80-aab3-11eb-8c5f-d65bf4f1d17d.png" style="width:40" onclick="currentSlide(17)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797405-8c05f280-aab3-11eb-87ed-b773d31d2fa1.png" style="width:40" onclick="currentSlide(18)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797406-8c9e8900-aab3-11eb-9405-f9bec95d1c4e.png" style="width:40" onclick="currentSlide(19)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797407-8d371f80-aab3-11eb-82d7-7f65155f6de6.png" style="width:40" onclick="currentSlide(20)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797408-8d371f80-aab3-11eb-9193-161cc9c24cd3.png" style="width:40" onclick="currentSlide(21)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797410-8dcfb600-aab3-11eb-8856-6aa84809001f.png" style="width:40" onclick="currentSlide(22)" alt=""> </div>
+    <div class="column"> <img class="demo cursor" src="https://user-images.githubusercontent.com/54191400/116797400-7c86a980-aab3-11eb-9a2d-6c93867b3c8f.png" style="width:40" onclick="currentSlide(23)" alt=""> </div>
+
+  </div>
+</div>
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <p> &nbsp; </p>
+  <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>- <a href="https://forms.gle/GpgkRCprvvawJ4gP8">Contact Drew / Purchase photo</a></p>
+  <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p style="text-align: center;"><i>© drewwolin.com – By Drew Wolin 2021</i></p>
+ 
+ </body>
 </html>
-<li><a href="https://drive.google.com/file/d/1YhOD-aFt4jbfB7eGBQcfSWD_ckQsbsb-/view?usp=sharing">3. the Adventures of Djembe Drew, pt. 1</a></li>

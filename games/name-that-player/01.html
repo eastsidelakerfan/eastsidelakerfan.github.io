@@ -72,7 +72,20 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
 }
+
+.hint {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
 
 .tooltip {
   position: relative;
@@ -107,11 +120,14 @@ img {
 
 
 <style type="text/css">
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
+
 
 a {
   color: lightgray;
@@ -224,14 +240,14 @@ a:hover {
 <div id="London" class="tabcontent">
   <h3></h3>
   <p></p>
-  <img src="https://user-images.githubusercontent.com/54191400/108927284-fad75300-760d-11eb-87de-d0c89d0e960c.png" alt="Girl in a jacket" width="1000" class="left">
+  <img src="https://user-images.githubusercontent.com/54191400/108927284-fad75300-760d-11eb-87de-d0c89d0e960c.png" alt="Girl in a jacket" width="1000" class="responsive">
 
 </div>
 
 <div id="Paris" class="tabcontent">
   <h3></h3>
   <p></p>
-  <img src="https://user-images.githubusercontent.com/54191400/116001012-7af34800-a5c0-11eb-9c15-a967a7bb8f7c.png" alt="Girl in a jacket" width="500"> 
+  <img src="https://user-images.githubusercontent.com/54191400/116001012-7af34800-a5c0-11eb-9c15-a967a7bb8f7c.png" alt="Girl in a jacket" width="500" class="hint"> 
 </div>
 
 <div id="Tokyo" class="tabcontent">

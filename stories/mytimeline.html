@@ -1,0 +1,246 @@
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XLJE18MRKD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XLJE18MRKD');
+</script>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: white;
+  margin: 20px;
+  -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+  transition: color 1s; /* For modern browsers */
+    }
+
+a:hover {
+  background-color: white;
+  color: black;
+}
+
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: Black;
+}
+
+
+
+/* Timeline format */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Set a background color */
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+
+
+
+
+
+
+
+
+</style>
+<link rel="icon" href="https://user-images.githubusercontent.com/54191400/107107247-01885c80-67fe-11eb-9a68-bef58ecf7818.png">
+
+</head>
+
+<html>
+ <body>
+  <p style="text-align: left;"><a href="https://drewwolin.com/">Home</a>  <a href="https://drewwolin.com/stories/adventures-of-djembe-drew/pt1.html"> &larr; Previous </a>
+
+
+  <p> &nbsp; </p>
+  <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>2017</h2>
+      <p>Lorem ipsum..</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2016</h2>
+      <p>Lorem ipsum..</p>
+    </div>
+  </div>
+</div>
+
+
+
+Born (Picture)
+Carmel
+Move to Katonah
+Played basketball in the inner city
+Camping trip article
+Bitcoin (and screenshots)... get Bitcoin rich
+
+
+
+  <p> &nbsp; </p>
+  <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>- <a href="https://forms.gle/GpgkRCprvvawJ4gP8">Say hi to Drew</a></p>
+  <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ <p style="text-align: center;"><i>© drewwolin.com – By Drew Wolin 2021</i></p>
+ 
+ </body>
+</html>

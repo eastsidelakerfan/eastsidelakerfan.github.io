@@ -13,6 +13,46 @@
 </script>
   
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: lightblue;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: black;
+  text-align: middle;
+  outline: black;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: red;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
+
 <style>
 img {
   display: block;
@@ -61,20 +101,65 @@ a:hover {
   <p style="text-align: left;"><a href="https://drewwolin.com/">Home</a>  <a href="https://drewwolin.com/photos/03.html"> &larr; Previous </a>
 
 <h1 style="text-align:center; color:darkblue">Drew's Gift Shop</h1>
-<h3 style="text-align:center; color:darkblue">All choices are either created or curated by Drew.</h3>
-<h3 style="text-align:center; color:darkblue">An *asterisk = "Created by Drew."</h3>
+<h3 style="text-align:center; color:darkblue">Welcome!  I hope you find this to be a fun experience for you.</h3>
 
-<h3 style="text-align:center; color:darkblue">Instructions: All gifts are assigned a point value.  Please use your points to decide on your gift.  Choose wisely.</h5>
+<h3 style="text-align:center; color:darkblue">Please select your gifts below.</h3>
+<p><br><br><br><br><br></p>
 
-	<p><br><br><br></p>
-  <p>Photo Prints<br></p>
-  <p>Story Books<br></p>
-  <p>Custom Song<br></p>
-  <p>Fun stuff<br></p>
-  <p>Reuse, Recycle<br></p>
-  <p>Experience -- Dinner with Drew, vacation, etc.<br></p>
+<h3 style="text-align:left; color:black">Notes</h3>
 
+<h4 style="text-align:left; color:black">All choices are either created or curated by Drew.</h4>
+<h4 style="text-align:left; color:black">An *asterisk = "Created by Drew."</h4>
 
+<h4 style="text-align:left; color:black">Instructions: All gifts are assigned a point value.  Please use your points to decide on your gift.  Choose wisely.</h4>
+
+<p><br><br><br><br><br></p>
+<h3 style="text-align:left; color:darkblue">Select a category, below.</h3>
+<p><br><br></p>
+<button class="collapsible">Photography // Prints and Stories</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible">Animations // Stories</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible">Custom Music</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="collapsible">Other Fun Stuff (Curated Collection)</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="collapsible">Reuse, Recycle</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="collapsible">Experience (ie. Dinner together, Drew's treat, etc.)</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 
 
 

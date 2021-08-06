@@ -17,8 +17,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .collapsible {
-  background-color: lightblue;
-  color: white;
+  background-color: white;
+  color: black;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -29,12 +29,12 @@
 }
 
 .active, .collapsible:hover {
-  background-color: red;
+  background-color: lightblue;
 }
 
 .collapsible:after {
-  content: '\002B';
-  color: white;
+  content: '\21D3';
+  color: black;
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -103,19 +103,17 @@ a:hover {
 <h1 style="text-align:center; color:darkblue">Drew's Gift Shop</h1>
 <h3 style="text-align:center; color:darkblue">Welcome!  I hope you find this to be a fun experience for you.</h3>
 
-<h3 style="text-align:center; color:darkblue">Please select your gifts below.</h3>
+<h3 style="text-align:center; color:darkblue">Please browse through, below.</h3>
 <p><br><br><br><br><br></p>
 
-<h3 style="text-align:left; color:black">Notes</h3>
-
-<h4 style="text-align:left; color:black">All choices are either created or curated by Drew.</h4>
-<h4 style="text-align:left; color:black">An *asterisk = "Created by Drew."</h4>
-
-<h4 style="text-align:left; color:black">Instructions: All gifts are assigned a point value.  Please use your points to decide on your gift.  Choose wisely.</h4>
+<button class="collapsible">Click here for more information.</button>
+<div class="content">
+  <p>All choices are either created or curated by Drew. An *asterisk = "Created by Drew." Instructions: All gifts are assigned a point value.  Please use your...</p>
+</div>
+<h4 style="text-align:left; color:black">
 
 <p><br><br><br><br><br></p>
-<h3 style="text-align:left; color:darkblue">Select a category, below.</h3>
-<p><br><br></p>
+
 <button class="collapsible">Photography // Prints and Stories</button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -161,7 +159,7 @@ for (i = 0; i < coll.length; i++) {
 }
 </script>
 
-
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 
 </p>
 </body>

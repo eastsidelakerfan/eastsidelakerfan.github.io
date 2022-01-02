@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NBA Name that Player</title>
+
+
+<script>
+
+var urlArray = [
+    "https://drewwolin.com/games/name-that-player/01.html",
+   "https://drewwolin.com/games/name-that-player/02.html"
+
+];
+
+function randomUrl() {
+    var randomNumber = Math.floor(Math.random() * urlArray.length);
+    var newUrl = urlArray[randomNumber];
+    window.location.href = newUrl;
+}
+  
+
+
+
+//confetti
+
+
+
+
+
+</script>
+
+<style>
+
+
+
+a.top {
+  color: lightgray;
+  margin: 1px;
+  -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+  transition: color 1s; /* For modern browsers */
+    }
+
+a.top:hover {
+  background-color: white;
+  color: black;
+}
+
+
+p {
+  color: lightgray;
+  margin: 1px;
+  -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+  transition: color 1s; /* For modern browsers */
+    }
+
+p:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+}
+
+
+
+
+
+
+
+.hint {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: 60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+
+<style type="text/css">
+
+
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+
+a {
+  color: lightgray;
+  margin: 10px;
+  -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+  transition: color 1s; /* For modern browsers */
+    }
+
+a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Style buttons */
+.btn {
+  background-color: White;
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: Black;
+}
+
+  body{
+    padding:5px;
+    margin: 20px auto;
+
+  }
+
+
+/* Tab styling */
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: sw-resize;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 60px 12px;
+  border: 2px solid #ccc;
+  border-top: none;
+}
+
+.btn {
+  border: 2px solid black;
+  background-color: green;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Green */
+.success {
+  border-color: #04AA6D;
+  color: white;
+
+</style>
+<link rel="icon" href="https://user-images.githubusercontent.com/54191400/107107247-01885c80-67fe-11eb-9a68-bef58ecf7818.png">
+</head>
+<body>
+
+<p><a href="https://drewwolin.com/" target="_self">Home</a>
+  <p> <br> </p>
+
+
+
+<h2 style="text-align:center">NBA: Name that Player -- 2022 All Star Edition</h2>
+<button class="btn success" style="float: right;">Easy</button>
+
+
+<p> </p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Quiz</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Hint</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Answer</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3></h3>
+  <p></p>
+  <img src="https://user-images.githubusercontent.com/54191400/147877003-b70c8662-c4ab-44ec-8cb2-9a44b68ddf35.png" alt="Player Stats" width="1000" class="responsive">
+
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3></h3>
+  <p></p>
+  <img src="https://user-images.githubusercontent.com/54191400/147877004-cbcdbd8e-0e78-4dd2-9f62-241d8224c544.png" alt="Player Bio" width="500" class="hint"> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3></h3>
+  <p></p>
+  <img src="https://user-images.githubusercontent.com/54191400/147877006-d3c1161c-ecdb-4ed9-9a1e-3ceb760f9b3b.png" alt="Answer" width="500" class="hint"> 
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+  document.getElementsByClassName('tablinks')[0].click()
+
+</script>
+
+<p> <br> </p>
+<p> <br> </p>
+<p> <br> </p>
+<a target="_self" href="#" onclick="randomUrl();" target="_self" class="top" >Play again</a>
+<p> <br> </p>
+<p> <br> </p>
+<p> <br> </p>
+<p> <br> </p>
+<p> <br> </p>
+<p> <br> </p>
+<p> <br> </p>
+<p> <br> </p>
+</body>
+</html>
+

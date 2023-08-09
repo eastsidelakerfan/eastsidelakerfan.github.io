@@ -61,23 +61,20 @@
 
                 overflow-x: auto; /* Allow horizontal scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-            width: 70%;
+            width: 60%;
             margin: 30px auto; /* Center horizontally with some vertical spacing */
             overflow: auto;
             height: 366px;
         }
 
-         #csvTable th, #csvTable td {
-       min-width: 80px;
-       /* ... your existing th and td styles ... */
-   }
+
 
         #csvTable {
             transform-origin: top left;
             table-layout: fixed;
             border-collapse: collapse;
             width: 100%;
-            font-size: clamp(4.5px, .6vw, 0.7em);
+            font-size: clamp(2.5px, .4vw, 0.7em);
         }
 
         th, td {
@@ -95,6 +92,11 @@
             width: 40px;
             max-width: 40px;
         }
+
+                 #csvTable th, #csvTable td {
+       min-width: 80px;
+       /* ... your existing th and td styles ... */
+   }
 
         button {
             margin: 10px 0; /* Space out the buttons */

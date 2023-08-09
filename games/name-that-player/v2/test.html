@@ -43,7 +43,7 @@
 
     <script>
 window.onload = function() {
-    fetch('data.csv')
+    fetch('https://drewwolin.com/games/name-that-player/v2/data.csv')
         .then(response => response.text())
         .then(data => {
             const parsedData = Papa.parse(data, {

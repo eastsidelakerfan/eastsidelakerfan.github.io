@@ -296,7 +296,7 @@ window.onload = function() {
             });
 
 document.getElementById('hintButton').addEventListener('click', function() {
-    let hint = "During his rookie season, this player played for " + parsedData.data[0]["Tm"];
+
     document.getElementById('modalHintText').textContent = hint;
 
     // Show the modal
@@ -343,6 +343,18 @@ document.getElementById('playerName').addEventListener('keyup', function(event) 
         document.getElementById('submitButton').click();
     }
 });
+
+// Get the modal
+let modal = document.getElementById('hintModal');
+
+// Add the click event listener
+modal.addEventListener('click', function(event) {
+    // Check if the clicked target is the modal itself and not a child element
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
     
     </script>
 

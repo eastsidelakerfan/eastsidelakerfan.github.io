@@ -99,12 +99,87 @@
     gap: 10px; /* space between the elements inside the flex container */
 }
 
+#timer {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+
+#hourglass {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin: 10px auto;
+}
+
+.top, .bottom {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.middle {
+    width: 60%;
+    height: 5px;
+    background: black;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.sand {
+    position: absolute;
+    background: gold;
+    width: 100%;
+}
+
+.top .sand {
+    bottom: 0;
+    height: 100%; /* Initially fill the whole top part */
+    animation: topSand 120s linear forwards;
+}
+
+.bottom .sand {
+    top: 100%; /* Initially no sand in the bottom */
+    height: 0;
+    animation: bottomSand 120s linear forwards;
+}
+
+@keyframes topSand {
+    to {
+        height: 0;
+    }
+}
+
+@keyframes bottomSand {
+    to {
+        height: 100%;
+    }
+}
+
+
     </style>
 </head>
 
 <body>
 
     <h1 id="pageTitle">Name that Player</h1>
+
+
+<div id="hourglass">
+    <div class="top">
+        <div class="sand"></div>
+    </div>
+    <div class="middle"></div>
+    <div class="bottom">
+        <div class="sand"></div>
+    </div>
+</div>
+
+
 
     <div id="tableContainer">
         <table id="csvTable">
@@ -298,6 +373,32 @@ document.getElementById('playerName').addEventListener('input', function() {
             });
     }
 });
+
+    // Initialize timer variables
+    let minutes = 2;
+    let seconds = 0;
+    let timerElem = document.getElementById('timer');
+
+    const countdown = setInterval(function() {
+        if (seconds === 0) {
+            if (minutes === 0) {
+                clearInterval(countdown); // stop the countdown
+                timerElem.innerHTML = "00:00"; 
+                // Optionally, you can add any action you want here once the timer reaches 0
+                return;
+            } else {
+                minutes--;
+                seconds = 59;
+            }
+        } else {
+            seconds--;
+        }
+
+        // Format the displayed time
+        let formattedMinutes = minutes.toString().padStart(2, '0');
+        let formattedSeconds = seconds.toString().padStart(2, '0');
+        timerElem.innerHTML = `${formattedMinutes}:${formattedSeconds}`;
+    }, 1000);
 
 
 

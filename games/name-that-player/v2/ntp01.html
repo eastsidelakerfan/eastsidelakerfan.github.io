@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSV to Table Display</title>
+    <title>Name that Player - Basketball</title>
     <style>
 
 /* The Modal */
@@ -58,6 +58,9 @@
         }
 
         #tableContainer {
+
+                overflow-x: auto; /* Allow horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
             width: 70%;
             margin: 30px auto; /* Center horizontally with some vertical spacing */
             overflow: auto;
@@ -161,12 +164,25 @@
 }
 
 
+/* For mobile devices with width less than 600px */
+@media only screen and (max-width: 600px) {
+    #csvTable {
+        /* Adjust the font-size, padding, etc. specifically for mobile here */
+        font-size: clamp(3.5px, .5vw, 0.5em);
+    }
+    
+    th, td {
+        padding: 2px 4px; /* Reduce padding for smaller screens */
+    }
+}
+
+
     </style>
 </head>
 
 <body>
 
-    <h1 id="pageTitle">Name that Player</h1>
+    <h1 id="pageTitle">Name that Player 🏀</h1>
 
 
 <div id="hourglass">

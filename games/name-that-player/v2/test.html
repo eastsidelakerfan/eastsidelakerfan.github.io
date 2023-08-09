@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 
@@ -7,65 +8,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSV to Table Display</title>
     <style>
-        /* Some basic styles for the table */
-        table {
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center; /* Center everything on screen */
+        }
+
+        #pageTitle {
+            font-size: 2em;
+            color: orange;
+            margin-bottom: 10px;
+        }
+
+        #tableContainer {
+            width: 70%;
+            margin: 30px auto; /* Center horizontally with some vertical spacing */
+            overflow: auto;
+            height: 326px;
+        }
+
+        #csvTable {
+            transform-origin: top left;
+            table-layout: fixed;
             border-collapse: collapse;
             width: 100%;
+            font-size: clamp(4.5px, .6vw, 0.7em);
         }
-        table, th, td {
-            border: 1px solid black;
-        }
+
         th, td {
-            padding: 8px 12px;
+            border: .8px solid black;
+            padding: 4px 8px;
+            white-space: nowrap;
         }
+
         th {
+            font-size: clamp(6.5px, 1vw, 0.9em);
             background-color: #f2f2f2;
         }
+
+        th.season-col, td:nth-child(1) {
+            width: 40px;
+            max-width: 40px;
+        }
+
+        button {
+            margin: 10px 0; /* Space out the buttons */
+        }
+
+        #inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* space between the elements inside the flex container */
+}
+
     </style>
 </head>
+
 <body>
-    <table id="csvTable">
-        <!-- The table headers will go here -->
-        <thead>
-            <tr>
-                <th>    Season  </th>
-                <th>    Age </th>
-                <th>    Tm  </th>
-                <th>    Lg  </th>
-                <th>    Pos </th>
-                <th>    G   </th>
-                <th>    GS  </th>
-                <th>    MP  </th>
-                <th>    FG  </th>
-                <th>    FGA </th>
-                <th>    FG% </th>
-                <th>    3P  </th>
-                <th>    3PA </th>
-                <th>    3P% </th>
-                <th>    2P  </th>
-                <th>    2PA </th>
-                <th>    2P% </th>
-                <th>    eFG%    </th>
-                <th>    FT  </th>
-                <th>    FTA </th>
-                <th>    FT% </th>
-                <th>    ORB </th>
-                <th>    DRB </th>
-                <th>    TRB </th>
-                <th>    AST </th>
-                <th>    STL </th>
-                <th>    BLK </th>
-                <th>    TOV </th>
-                <th>    PF  </th>
-                <th>    PTS </th>
-            </tr>
-        </thead>
-        <!-- The table body will be populated with the CSV data -->
-        <tbody>
-        </tbody>
-    </table>
+
+    <h1 id="pageTitle">Name that Player</h1>
+
+    <div id="tableContainer">
+        <table id="csvTable">
+            <thead>
+                <tr>
+                    <th class="season-col">Season</th>
+                    <th>Age</th>
+                    <th>Lg</th>
+                    <th>G</th>
+                    <th>GS</th>
+                    <th>MP</th>
+                    <th>FG</th>
+                    <th>FGA</th>
+                    <th>FG%</th>
+                    <th>3P</th>
+                    <th>3PA</th>
+                    <th>3P%</th>
+                    <th>2P</th>
+                    <th>2PA</th>
+                    <th>2P%</th>
+                    <th>eFG%</th>
+                    <th>FT</th>
+                    <th>FTA</th>
+                    <th>FT%</th>
+                    <th>ORB</th>
+                    <th>DRB</th>
+                    <th>TRB</th>
+                    <th>AST</th>
+                    <th>STL</th>
+                    <th>BLK</th>
+                    <th>TOV</th>
+                    <th>PF</th>
+                    <th>PTS</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <button id="hintButton">Show Hint</button> <span id="hintText" style="display: none;"></span>
+    </div>
+    
+
+    <div>
+        <button id="zoomToggle">Zoom In</button>
+    </div>
+
+    <div id="inputContainer">
+    <label for="playerName">Name that player: </label>
+    <input type="text" id="playerName" list="playersAutocomplete">
+<datalist id="playersAutocomplete"></datalist>
+<button id="submitButton">Submit</button>
+
+</div>
+
+
+    <div id="results"></div> 
 
     <script>
+            
+        let isZoomed = false;
+
+        document.getElementById('zoomToggle').addEventListener('click', function() {
+            let table = document.getElementById('csvTable');
+            let container = document.getElementById('tableContainer');
+
+            if (isZoomed) {
+                table.style.transform = 'scale(1)';
+                container.style.overflow = 'hidden';
+                this.textContent = 'Zoom In';
+            } else {
+                table.style.transform = 'scale(2)';
+                container.style.overflow = 'auto';
+                this.textContent = 'Zoom Out';
+            }
+
+            isZoomed = !isZoomed;
+        });
+
 window.onload = function() {
     fetch('https://drewwolin.com/games/name-that-player/v2/data.csv')
         .then(response => response.text())
@@ -80,16 +162,87 @@ window.onload = function() {
             parsedData.data.forEach(row => {
                 let rowElem = document.createElement('tr');
                 for (let key in row) {
+                    // Skip the 'Tm' column
+                    if (key === "Tm" || key === "Pos") continue;
+
                     let cellElem = document.createElement('td');
                     cellElem.textContent = row[key];
                     rowElem.appendChild(cellElem);
                 }
                 tableBody.appendChild(rowElem);
             });
+
+            // Setting the hint value from the first row's "Tm" column
+            let hint = "Rookie year team: " + parsedData.data[0]["Tm"];
+
+            document.getElementById('hintButton').addEventListener('click', function() {
+                const hintTextElement = document.getElementById('hintText');
+                hintTextElement.textContent = hint;  // Display the hint
+                hintTextElement.style.display = 'inline'; // Make it visible
+            });
         });
 }
 
+document.getElementById('submitButton').addEventListener('click', function() {
+    // Get the user's input
+    const userInput = document.getElementById('playerName').value.trim();
+    
+    // Reference to a results display area
+    let resultsDiv = document.getElementById('results');
 
+    // If it doesn't exist, create it
+    if (!resultsDiv) {
+        resultsDiv = document.createElement('div');
+        resultsDiv.id = 'results';
+        document.body.appendChild(resultsDiv); // or you can insert it below the inputContainer div
+    }
+
+    // Check the answer and display the result
+    if (userInput.toLowerCase() === 'james harden') {
+        resultsDiv.textContent = 'Correct';
+        resultsDiv.style.color = 'green';
+    } else {
+        resultsDiv.textContent = 'Try again';
+        resultsDiv.style.color = 'red';
+    }
+});
+document.getElementById('playerName').addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        document.getElementById('submitButton').click();
+    }
+});
+    
     </script>
+
+<script>
+
+document.getElementById('playerName').addEventListener('input', function() {
+    const inputValue = this.value;
+    const datalist = document.getElementById('playersAutocomplete');
+
+    // Clear out the datalist
+    datalist.innerHTML = '';
+
+    // If user input is 3 characters or more, fetch names and populate datalist
+    if (inputValue.length >= 3) {
+        fetch('https://drewwolin.com/games/name-that-player/v2/autocomplete-names.txt') // Make sure to provide the correct path
+            .then(response => response.text())
+            .then(data => {
+                const players = data.split('\n');
+
+                players.forEach(player => {
+                    if (player.toLowerCase().startsWith(inputValue.toLowerCase())) {
+                        const optionElem = document.createElement('option');
+                        optionElem.value = player;
+                        datalist.appendChild(optionElem);
+                    }
+                });
+            });
+    }
+});
+
+
+
+</script>
 </body>
 </html>

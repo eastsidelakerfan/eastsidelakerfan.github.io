@@ -274,7 +274,7 @@ document.getElementById('playerName').addEventListener('keyup', function(event) 
 <script>
 
 document.getElementById('playerName').addEventListener('input', function() {
-    const inputValue = this.value;
+    const inputValue = this.value.toLowerCase(); // convert to lowercase for case-insensitive match
     const datalist = document.getElementById('playersAutocomplete');
 
     // Clear out the datalist
@@ -282,13 +282,14 @@ document.getElementById('playerName').addEventListener('input', function() {
 
     // If user input is 3 characters or more, fetch names and populate datalist
     if (inputValue.length >= 3) {
-        fetch('https://drewwolin.com/games/name-that-player/v2/autocomplete-names.txt') // Make sure to provide the correct path
+        fetch('https://drewwolin.com/games/name-that-player/v2/autocomplete-names.txt')
             .then(response => response.text())
             .then(data => {
                 const players = data.split('\n');
 
                 players.forEach(player => {
-                    if (player.toLowerCase().startsWith(inputValue.toLowerCase())) {
+                    const playerNameParts = player.toLowerCase().split(' '); // Split the name into parts (e.g. ["russell", "westbrook"])
+                    if (playerNameParts.some(part => part.startsWith(inputValue))) {
                         const optionElem = document.createElement('option');
                         optionElem.value = player;
                         datalist.appendChild(optionElem);
@@ -297,6 +298,7 @@ document.getElementById('playerName').addEventListener('input', function() {
             });
     }
 });
+
 
 
 

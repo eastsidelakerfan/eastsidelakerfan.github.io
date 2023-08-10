@@ -119,7 +119,7 @@
 
 
 #hourglass {
-    width: 40px;
+    width: 500px;
     height: 30px;
     position: relative;
     margin: 10px auto;
@@ -143,7 +143,7 @@
 
 .sand {
     position: absolute;
-    background: gold;
+    background: orange;
     width: 100%;
 }
 
@@ -194,6 +194,18 @@
     z-index: 1000;    /* A high z-index value to ensure the column stays above other elements */
 }
 
+#hoverTimer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: #fff;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+
 
     </style>
 </head>
@@ -216,7 +228,9 @@
     <div class="bottom">
         <div class="sand"></div>
     </div>
+    <div id="hoverTimer" style="display: none;">2:00</div>
 </div>
+
 
 
 
@@ -493,6 +507,46 @@ document.body.addEventListener('click', function(e) {
 
 
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const timerElement = document.getElementById('hoverTimer');
+    let timeLeft = 120;  // 2 minutes in seconds
+    let timerInterval;
+
+    const hourglassElement = document.getElementById('hourglass');
+
+    // Mouseover event for the hourglass to display the timer
+    hourglassElement.addEventListener('mouseover', function() {
+        timerElement.style.display = 'block';
+    });
+
+    // Mouseout event to hide the timer
+    hourglassElement.addEventListener('mouseout', function() {
+        timerElement.style.display = 'none';
+    });
+
+    // Start the timer as soon as the page loads
+    timerInterval = setInterval(function() {
+        timeLeft--;
+
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            timerElement.textContent = "Time's up!";
+        } else {
+            timerElement.textContent = formatTime(timeLeft);
+        }
+    }, 1000);
+});
+
+function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+}
+</script>
+
+
 
 </body>
 </html>

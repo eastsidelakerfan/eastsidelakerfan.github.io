@@ -49,6 +49,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center; /* Center everything on screen */
+            margin-left: 100px; /* Make room for the new left column */
         }
 
         #pageTitle {
@@ -183,11 +184,26 @@
     }
 }
 
+#leftColumn {
+    position: fixed;  /* This will keep the column fixed on the page while scrolling */
+    top: 0;           /* Starting from the very top of the page */
+    left: 0;          /* Starting from the very left of the page */
+    width: 100px;     /* Set the width of the column */
+    height: 100%;     /* Stretch it to full height of the viewport */
+    background-color: darkblue; /* Set the background color to dark blue */
+    z-index: 1000;    /* A high z-index value to ensure the column stays above other elements */
+}
+
 
     </style>
 </head>
 
 <body>
+<div id="leftColumn">
+    <br>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1200px-Download_on_the_App_Store_Badge.svg.png" alt="App Store Badge" width="90">
+
+</div>
 
     <h1 id="pageTitle">Name that Player 🏀</h1>
 

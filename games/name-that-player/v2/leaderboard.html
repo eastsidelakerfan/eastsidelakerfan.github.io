@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		
+	</title>
+</head>
+<body>
+
+<table id="leaderboardTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Time (Seconds)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Entries will be populated here -->
+    </tbody>
+</table>
+
+
+</body>
+
+
+<script>
+	
+
+window.onload = function() {
+    let leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
+    let tableBody = document.querySelector("#leaderboardTable tbody");
+
+    leaderboard.forEach(entry => {
+        let rowElem = document.createElement('tr');
+        
+        let nameCell = document.createElement('td');
+        nameCell.textContent = entry.name;
+        rowElem.appendChild(nameCell);
+
+        let timeCell = document.createElement('td');
+        timeCell.textContent = entry.time;
+        rowElem.appendChild(timeCell);
+
+        tableBody.appendChild(rowElem);
+    });
+}
+
+
+
+</script>
+
+</html>

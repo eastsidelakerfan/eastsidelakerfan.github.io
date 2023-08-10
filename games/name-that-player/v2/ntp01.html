@@ -61,7 +61,7 @@
 
                 overflow-x: auto; /* Allow horizontal scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-            width: 60%;
+            width: 70%;
             margin: 30px auto; /* Center horizontally with some vertical spacing */
             overflow: auto;
             height: 366px;
@@ -74,7 +74,7 @@
             table-layout: fixed;
             border-collapse: collapse;
             width: 100%;
-            font-size: clamp(2.5px, .4vw, 0.7em);
+            font-size: clamp(4.5px, .6vw, 0.9em);
         }
 
         th, td {
@@ -84,7 +84,7 @@
         }
 
         th {
-            font-size: clamp(6.5px, 1vw, 0.9em);
+            font-size: clamp(6.5px, 1vw, 1em);
             background-color: #f2f2f2;
         }
 
@@ -353,9 +353,20 @@ document.getElementById('submitButton').addEventListener('click', function() {
     }
 
     // Check the answer and display the result
-    if (userInput.toLowerCase() === 'russell westbrook') {
-        resultsDiv.textContent = 'Success!';
-        resultsDiv.style.color = 'green';
+if (userInput.toLowerCase() === 'russell westbrook') {
+    resultsDiv.innerHTML = 'Success! <a href="https://drewwolin.com/games/name-that-player/v2/leaderboard.html">View Leaderboard</a>';
+    resultsDiv.style.color = 'green';
+
+    let timeTaken = 120 - (minutes * 60 + seconds); // Assuming the initial time was 2 minutes (120 seconds)
+    let playerName = prompt("Enter your name to join the leaderboard:");
+
+    if (playerName) {
+        // Store to localStorage
+        let leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
+        leaderboard.push({name: playerName, time: timeTaken});
+        localStorage.setItem('leaderboard', JSON.stringify(leaderboard));
+    }
+
     } else {
         resultsDiv.textContent = 'Try again';
         resultsDiv.style.color = 'red';
@@ -439,5 +450,33 @@ document.getElementById('playerName').addEventListener('input', function() {
 
 
 </script>
+
+
+<script>
+let startTime = Date.now(); // Start the timer when the page loads
+
+// Inside the 'submitButton' click event listener
+if (userInput.toLowerCase() === 'russell westbrook') {
+    let endTime = Date.now();
+    let timeTaken = Math.round((endTime - startTime) / 1000); // in seconds
+    ...
+}
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.id === 'saveNameBtn') {
+        let userName = document.getElementById('userNameInput').value;
+        if (userName) {
+            let leaderboardData = JSON.parse(localStorage.getItem('leaderboard')) || [];
+            leaderboardData.push({ name: userName, time: timeTaken });
+            localStorage.setItem('leaderboard', JSON.stringify(leaderboardData));
+            resultsDiv.textContent = 'Name and time saved! Check the leaderboard page.';
+        }
+    }
+});
+
+
+
+</script>
+
 </body>
 </html>

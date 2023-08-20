@@ -126,6 +126,10 @@ tr:hover {background-color: #D6EEEE;}
             max-width: 40px;
         }
 
+                th.fgper-col, td:nth-child(1) {
+            width: 20px;
+            max-width: 40px;}
+
                  #csvTable th, #csvTable td {
        min-width: 80px;
        /* ... your existing th and td styles ... */
@@ -278,17 +282,17 @@ tr:hover {background-color: #D6EEEE;}
                     <th>MP</th>
                     <th>FG</th>
                     <th>FGA</th>
-                    <th>FG%</th>
+                    <th class="fgper-col">FG%</th>
                     <th>3P</th>
                     <th>3PA</th>
-                    <th>3P%</th>
+                    <th class="fgper-col">3P%</th>
                     <th>2P</th>
                     <th>2PA</th>
-                    <th>2P%</th>
-                    <th>eFG%</th>
+                    <th class="fgper-col">2P%</th>
+                    <th class="fgper-col">eFG%</th>
                     <th>FT</th>
                     <th>FTA</th>
-                    <th>FT%</th>
+                    <th class="fgper-col">FT%</th>
                     <th>ORB</th>
                     <th>DRB</th>
                     <th>TRB</th>
@@ -579,32 +583,7 @@ function formatTime(seconds) {
 
 </script>
 
-<script>
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    const table = document.getElementById("csvTable");
-    
-    // Start from the second row, to skip the header
-    for (let i = 1; i < table.rows.length; i++) {
-        const row = table.rows[i];
-        
-        // Columns to be formatted are indicated by their indexes
-        const colsToFormat = [5, 6, 7, 8, 9];
-
-        for (let index of colsToFormat) {
-            const cell = row.cells[index];
-            if (cell) {
-                const value = parseFloat(cell.textContent);
-                if (!isNaN(value)) {
-                    cell.textContent = (value * 100).toFixed(2) + '%';
-                }
-            }
-        }
-    }
-});
-
-
-</script>
 
 
 </body>

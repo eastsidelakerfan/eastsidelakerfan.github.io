@@ -1,0 +1,27 @@
+    <p><strong>Lg</strong> = League</p>
+    <p><strong>G</strong> = Games Played</p>
+    <p><strong>GS</strong> = Games Started</p>
+    <br>
+    <p><em>All stats below are per-game averages:</em></p>
+    <p><strong>MP</strong> = Minutes Played</p>
+    <p><strong>FG</strong> = Field Goals Made</p>
+    <p><strong>FGA</strong> = Field Goal Attempts</p>
+    <p><strong>FG%</strong> = Field Goal Percentage</p>
+    <p><strong>3PM</strong> = 3-Pointers Made</p>
+    <p><strong>3PA</strong> = 3-Point Attempts</p>
+    <p><strong>3P%</strong> = 3-Point Percentage</p>
+    <p><strong>2PM</strong> = 2-Pointers Made</p>
+    <p><strong>2PA</strong> = 2-Point Attempts</p>
+    <p><strong>2P%</strong> = 2-Point Percentage</p>
+    <p><strong>FTM</strong> = Free Throws Made</p>
+    <p><strong>FTA</strong> = Free Throw Attempts</p>
+    <p><strong>FT%</strong> = Free Throw Percentage</p>
+    <p><strong>OREB</strong> = Offensive Rebounds</p>
+    <p><strong>DREB</strong> = Defensive Rebounds</p>
+    <p><strong>REB</strong> = Total Rebounds</p>
+    <p><strong>AST</strong> = Assists</p>
+    <p><strong>STL</strong> = Steals</p>
+    <p><strong>BLK</strong> = Blocks</p>
+    <p><strong>TOV</strong> = Turnovers</p>
+    <p><strong>PF</strong> = Personal Fouls</p>
+    <p><strong>PTS</strong> = Points</p>

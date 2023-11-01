@@ -1,0 +1,59 @@
+.narrow-column {
+    width: 35px;  /* Adjust as needed */
+    max-width: 35px;
+    text-overflow: ellipsis;
+}
+
+
+
+        .table-row {
+            height: 1px;             /* Set the height of the row */
+            padding: 1px;
+        }
+        table {
+        font-size: 11.5px; /* Set the minimum font size */
+    }
+
+tr {
+   line-height: 8px;
+   min-height: 8px;
+   height: 8px;
+}
+
+
+    th, td {
+        white-space: nowrap; /* Prevent text from wrapping onto the next line */
+        min-width: 20px;     /* Adjust this value if needed, this is just an example */
+
+    }
+
+    /* This will ensure that the table scrolls horizontally */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Styling for the sticky first column */
+.table thead th:first-child, .table tbody td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;  /* This ensures the sticky column is on top during horizontal scrolling */
+    background-color: white;  /* This makes sure the background isn't transparent */
+    box-shadow: 1px 0px 1px #aaa;  /* Optional: adds a shadow effect to the right side of the sticky column for better separation */
+}
+
+
+
+/* By default, set the image to 320x50 */
+.responsive-img {
+    width: 320px;
+    height: 50px;
+}
+
+/* Use a media query to detect larger screens and set the size to 728x90 */
+@media screen and (min-width: 768px) {  /* You can adjust this breakpoint if needed */
+    .responsive-img {
+        width: 728px;
+        height: 90px;
+    }
+}
+

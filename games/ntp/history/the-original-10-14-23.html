@@ -18,20 +18,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h4>
-<link rel="stylesheet" href="https://namethatplayer.com/styles.css">
+<link rel="stylesheet" href="https://drewwolin.com/games/ntp/styles.css">
 
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9358806105469090"
      crossorigin="anonymous"></script>
 
 
-    <link rel="icon" href="https://namethatplayer.com/assets/ntp-logo-oct-23.jpeg" type="image/jpeg">
-<meta property="og:image" content="https://namethatplayer.com/assets/ntp-logo-oct-23.jpeg">
+    <link rel="icon" href="https://drewwolin.com/games/ntp/assets/ntp-logo-oct-23.jpeg" type="image/jpeg">
+<meta property="og:image" content="https://drewwolin.com/games/ntp/assets/ntp-logo-oct-23.jpeg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="600"> <!-- Adjust as necessary -->
 <meta property="og:image:height" content="315"> <!-- Adjust as necessary -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://namethatplayer.com/assets/ntp-logo-oct-23.jpeg">
+<meta name="twitter:image" content="https://drewwolin.com/games/ntp/assets/ntp-logo-oct-23.jpeg">
 
 
     <title>NBA Name that Player - New Daily Challenge Posted!</title>
@@ -311,7 +311,7 @@ document.getElementById('flexSwitchCheckHint4').addEventListener('change', funct
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://namethatplayer.com/assets/stats/10-14-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/10-14-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -394,7 +394,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
             datalist.innerHTML = '';
 
             if (inputValue.length >= 3) {
-                fetch('https://namethatplayer.com/autocomplete-names.txt')
+                fetch('https://drewwolin.com/games/ntp/autocomplete-names.txt')
                     .then(response => response.text())
                     .then(data => {
                         const players = data.split('\n');
@@ -415,7 +415,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
     <script>$(document).ready(function() {
     $('#definitionsModal').on('show.bs.modal', function() {
         $.ajax({
-            url: 'https://namethatplayer.com/assets/data-definitions.txt',
+            url: 'https://drewwolin.com/games/ntp/assets/data-definitions.txt',
             dataType: 'text',
             success: function(data) {
                 $('#definitionsModal .modal-body').html(data);
@@ -432,7 +432,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 $(document).ready(function() {
     $('#historyModal').on('show.bs.modal', function(e) {
         // This code will run when the History modal is about to be shown
-        $('#historyContent').load('https://namethatplayer.com/history/history.txt', function(response, status, xhr) {
+        $('#historyContent').load('https://drewwolin.com/games/ntp/history/history.txt', function(response, status, xhr) {
             if (status == "error") {
                 $('#historyContent').html('<p>Error loading content</p>');
             }
@@ -449,7 +449,7 @@ $(document).ready(function() {
 <footer class="bg-primary text-white text-center py-3">
     Thank you for playing Name that Player!
     <br>
-    <a href="https://namethatplayer.com/privacy-policy.html" style="color: white;">Privacy Policy</a>
+    <a href="https://drewwolin.com/games/ntp/privacy-policy.html" style="color: white;">Privacy Policy</a>
 
 </footer>
 

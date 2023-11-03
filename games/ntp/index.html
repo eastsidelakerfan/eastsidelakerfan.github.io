@@ -183,7 +183,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>11-02-23</em></p>
+    <p style="color: gray;" class="text-center"><em>11-03-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -342,22 +342,22 @@
     // Define answer
     document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint1').textContent = "School: Minnesota";
+            document.getElementById('labelHint1').textContent = "School: Michigan State";
         }
     });
     document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint2').textContent = "Nickname: Herman Munster, Black Hole";
+            document.getElementById('labelHint2').textContent = "Nickname: Tragic, the Magic Man";
         }
     });
     document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint3').textContent = "Born in: Hibbing, Minnesota";
+            document.getElementById('labelHint3').textContent = "Born in: Lansing, Michigan";
         }
     });
     document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint4').textContent = "Rookie Year Team: BOS";
+            document.getElementById('labelHint4').textContent = "Rookie Year Team: LAL";
         }
     });
     </script>
@@ -367,7 +367,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/11-02-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/11-03-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -400,13 +400,13 @@
         let resultsDiv = document.getElementById('results');
 
         // Can I pull this out as a variable on the top of the page? Along with date?
-        if (userInput.toLowerCase() === 'kevin mchale') {
+        if (userInput.toLowerCase() === 'magic johnson') {
 
               // Display the "Correct Answer" modal
               const correctAnswerModal = $('#correctAnswerModal');
               
               // Set the content of the modal body
-              correctAnswerModal.find('.modal-body').html('You know ball 🤝<br>Nice work!<br><br>Send a screenshot to your friends! Invite them to play. <br><br>And check back tomorrow for our next daily challenge... <br><br>');
+              correctAnswerModal.find('.modal-body').html('You know ball 🤝<br>Nice work!<br><br>Send a screenshot to your friends! Invite them to play. <br><br>And check back Monday for our next daily (weekdays) challenge... <br><br>');
               
               // Show the modal
               correctAnswerModal.modal('show');

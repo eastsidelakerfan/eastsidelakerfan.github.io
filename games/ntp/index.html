@@ -26,6 +26,9 @@
     <!-- Link for Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+    <!-- Include Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
     <!-- My own local CSS Stylesheet -->
     <link rel="stylesheet" href="https://drewwolin.com/games/ntp/styles.css">
 
@@ -176,6 +179,14 @@
                       </div>
                     </div>
                 </li>
+            </ul>
+
+        <div class="ms-auto">
+            <a href="https://youtube.com/@NYSportsnAnalytics" class="bi bi-youtube text-white" style="font-size: 1.5rem; padding-left: 15px;" target="_blank" aria-label="YouTube"></a>
+            <a href="https://twitter.com/SportsnData" class="bi bi-twitter text-white ms-2 me-3" style="font-size: 1.5rem;" target="_blank" aria-label="Twitter"></a>
+        </div>
+
+
     </nav>
 
     <br>
@@ -183,7 +194,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>11-03-23</em></p>
+    <p style="color: gray;" class="text-center"><em>11-06-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -342,22 +353,22 @@
     // Define answer
     document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint1').textContent = "School: Michigan State";
+            document.getElementById('labelHint1').textContent = "School: UMass";
         }
     });
     document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint2').textContent = "Nickname: Tragic, the Magic Man";
+            document.getElementById('labelHint2').textContent = "Nickname: the Doctor, the Claw";
         }
     });
     document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint3').textContent = "Born in: Lansing, Michigan";
+            document.getElementById('labelHint3').textContent = "Born in: Roosevelt, NY";
         }
     });
     document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint4').textContent = "Rookie Year Team: LAL";
+            document.getElementById('labelHint4').textContent = "Rookie Year Team: Virginia Squires (Aba)";
         }
     });
     </script>
@@ -367,7 +378,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/11-03-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/11-06-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -396,25 +407,24 @@
 
         // Logic to evaluate the text input as right or wrong
         document.getElementById('submitButton').addEventListener('click', function() {
-        const userInput = document.getElementById('playerName').value.trim();
-        let resultsDiv = document.getElementById('results');
+    const userInput = document.getElementById('playerName').value.trim();
+    let resultsDiv = document.getElementById('results');
 
-        // Can I pull this out as a variable on the top of the page? Along with date?
-        if (userInput.toLowerCase() === 'magic johnson') {
+    if (userInput.toLowerCase() === 'julius irving') {
+        // Display the "Correct Answer" modal
+        const correctAnswerModal = $('#correctAnswerModal');
+        
+        // Set the content of the modal body
+          const timeRemaining = `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
+          correctAnswerModal.find('.modal-body').html(`You know ball 🤝<br>Nice work!<br><br>Send a screenshot to your friends! Invite them to play. <br><br>And check back tomorrow for our next daily challenge... <br><br><span style="color: gray; font-style: italic;">Time remaining: ${timeRemaining}</span><br><br>`);
+          
+        
+        // Show the modal
+        correctAnswerModal.modal('show');
 
-              // Display the "Correct Answer" modal
-              const correctAnswerModal = $('#correctAnswerModal');
-              
-              // Set the content of the modal body
-              correctAnswerModal.find('.modal-body').html('You know ball 🤝<br>Nice work!<br><br>Send a screenshot to your friends! Invite them to play. <br><br>And check back Monday for our next daily (weekdays) challenge... <br><br>');
-              
-              // Show the modal
-              correctAnswerModal.modal('show');
-
-              // Stop the countdown
-            clearInterval(countdownInterval);
+        // Stop the countdown
+        clearInterval(countdownInterval);
   
-
         // Check which hints were used
         const hint1 = document.getElementById('flexSwitchCheckHint1');
         const hint2 = document.getElementById('flexSwitchCheckHint2');
@@ -425,21 +435,24 @@
         if (hint2.checked) hintsUsed.push('Nickname');
         if (hint3.checked) hintsUsed.push('Born in');
         if (hint4.checked) hintsUsed.push('Rookie Year Team');
-        // If any hints were used, append them to the success message
-          // Append hints to the message if needed
-          if (hintsUsed.length > 0) {
+        
+        // Append hints to the message if needed
+        if (hintsUsed.length > 0) {
             correctAnswerModal.find('.modal-body').append('<span style="color: gray;">Hints used: <em>' + hintsUsed.join(', ') + '.</em> <br><br></span>');
-          } else {
-            correctAnswerModal.find('.modal-body').append('<span style="color: gray;"><em>No hints used!</em> <br> <br></span>');
-          }
-
-          resultsDiv.style.color = 'green';
-
-
         } else {
-            resultsDiv.textContent = 'Try again -- scroll down for hints if you need them!';
-            resultsDiv.style.color = 'red';
-        }});
+            correctAnswerModal.find('.modal-body').append('<span style="color: gray;"><em>No hints used!</em> <br> <br></span>');
+        }
+
+        // Update the resultsDiv text content
+        resultsDiv.textContent = 'Nice work!';
+        resultsDiv.style.color = 'green';
+
+    } else {
+        resultsDiv.textContent = 'Try again -- scroll down for hints if you need them!';
+        resultsDiv.style.color = 'red';
+    }
+});
+
 
         document.getElementById('playerName').addEventListener('keydown', function(event) {
         if (event.key === "Enter" || event.keyCode === 13) {  // Check if the key is "Enter"
@@ -488,16 +501,20 @@
     <!-- Countdown clock script -->
     <script>
         let countdownInterval;
+        let minutes, remainingSeconds;
 
-      // Function to start the countdown timer
+        // Function to start the countdown timer
         function startCountdown(durationInSeconds) {
           const countdownElement = document.getElementById("countdown");
           const submitButton = document.getElementById("submitButton");
 
           let seconds = durationInSeconds;
+          minutes = Math.floor(seconds / 60);
+          remainingSeconds = seconds % 60;
+
           countdownInterval = setInterval(function () {
-            const minutes = Math.floor(seconds / 60);
-            const remainingSeconds = seconds % 60;
+            minutes = Math.floor(seconds / 60);
+            remainingSeconds = seconds % 60;
 
             // Display the countdown in the "countdown" element
             countdownElement.innerHTML = `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
@@ -514,9 +531,10 @@
           }, 1000);
         }
 
+        // Start the countdown with 1 minute (60 seconds)
+        startCountdown(90);
 
-      // Start the countdown with 1 minute (60 seconds)
-      startCountdown(90);
+
     </script>
 
 

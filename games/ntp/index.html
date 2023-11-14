@@ -194,7 +194,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>11-13-23</em></p>
+    <p style="color: gray;" class="text-center"><em>11-14-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -288,13 +288,6 @@
     </div>
 
     <br>
-
-    <div class="form-check form-switch" style="padding-left: 14vw;">
-      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckHint5">
-      <label class="form-check-label" for="flexSwitchCheckHint5" id="labelHint5">For Fun: </label>
-    </div>
-
-    <br>
     <br>
     <br>
     <br>
@@ -345,36 +338,26 @@
             this.disabled = true;
         }
     });
-    document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
-        if (this.checked) {
-            this.disabled = true;
-        }
-    });
 
     // Define answer
     document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint1').textContent = "School: Kansas";
+            document.getElementById('labelHint1').textContent = "School: Seattle University";
         }
     });
     document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint2').textContent = "Nickname: the Stilt";
+            document.getElementById('labelHint2').textContent = "Nickname: Rabbit, Tick Tock, Aches and Pains";
         }
     });
     document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint3').textContent = "Born in: Philadelphia, PA";
+            document.getElementById('labelHint3').textContent = "Born in: Washington, DC";
         }
     });
     document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint4').textContent = "Rookie Year Team: Philadelphia Warriors";
-        }
-    });
-        document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
-        if (this.checked) {
-            document.getElementById('labelHint5').textContent = "For Fun: Additional nicknames include the Big Dipper, Dippy, the Load, Big Mustie, Whipper, and Norm.\n Also reported having a nearly mathematically-impossible number of romantic partners.";
+            document.getElementById('labelHint4').textContent = "Rookie Year Team: Minneapolis Lakers";
         }
     });
     </script>
@@ -384,7 +367,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/11-13-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/11-14-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -416,7 +399,7 @@
     const userInput = document.getElementById('playerName').value.trim();
     let resultsDiv = document.getElementById('results');
 
-    if (userInput.toLowerCase() === 'wilt chamberlain') {
+    if (userInput.toLowerCase() === 'elgin baylor') {
         // Display the "Correct Answer" modal
         const correctAnswerModal = $('#correctAnswerModal');
         
@@ -436,13 +419,11 @@
         const hint2 = document.getElementById('flexSwitchCheckHint2');
         const hint3 = document.getElementById('flexSwitchCheckHint3');
         const hint4 = document.getElementById('flexSwitchCheckHint4');
-        const hint5 = document.getElementById('flexSwitchCheckHint5');
         let hintsUsed = [];
         if (hint1.checked) hintsUsed.push('School');
         if (hint2.checked) hintsUsed.push('Nickname');
         if (hint3.checked) hintsUsed.push('Born in');
         if (hint4.checked) hintsUsed.push('Rookie Year Team');
-        if (hint5.checked) hintsUsed.push('For Fun');
         
         // Append hints to the message if needed
         if (hintsUsed.length > 0) {

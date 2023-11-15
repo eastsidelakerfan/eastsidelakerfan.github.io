@@ -194,7 +194,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>11-14-23</em></p>
+    <p style="color: gray;" class="text-center"><em>11-15-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -342,22 +342,22 @@
     // Define answer
     document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint1').textContent = "School: Seattle University";
+            document.getElementById('labelHint1').textContent = "School: San Francisco";
         }
     });
     document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint2').textContent = "Nickname: Rabbit, Tick Tock, Aches and Pains";
+            document.getElementById('labelHint2').textContent = "Nickname: Whiskers, the Stuffer";
         }
     });
     document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint3').textContent = "Born in: Washington, DC";
+            document.getElementById('labelHint3').textContent = "Born in: Monroe, Louisiana";
         }
     });
     document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint4').textContent = "Rookie Year Team: Minneapolis Lakers";
+            document.getElementById('labelHint4').textContent = "Rookie Year Team: BOS";
         }
     });
     </script>
@@ -367,7 +367,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/11-14-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/11-15-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -399,7 +399,7 @@
     const userInput = document.getElementById('playerName').value.trim();
     let resultsDiv = document.getElementById('results');
 
-    if (userInput.toLowerCase() === 'elgin baylor') {
+    if (userInput.toLowerCase() === 'bill russell') {
         // Display the "Correct Answer" modal
         const correctAnswerModal = $('#correctAnswerModal');
         

@@ -194,7 +194,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>11-20-23</em></p>
+    <p style="color: gray;" class="text-center"><em>11-21-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -354,12 +354,12 @@
     // Define answer
     document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint1').textContent = "School: Holy Cross";
+            document.getElementById('labelHint1').textContent = "School: NYU";
         }
     });
     document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint2').textContent = "Nickname: Houdini of the Hardwood, Flenchy";
+            document.getElementById('labelHint2').textContent = "Nickname: the Rainbow Kid, Dolly";
         }
     });
     document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
@@ -369,12 +369,12 @@
     });
     document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint4').textContent = "Rookie Year Team: BOS";
+            document.getElementById('labelHint4').textContent = "Rookie Year Team: Syracuse Nationals";
         }
     });
         document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint5').textContent = "For Fun: This player was the first EVER draft selection made by the Tri-Cities Blackhawks (who would later re-brand to the Atlanta Hawks). The first pick (territorial pick) in this same draft was Paul Arizin.";
+            document.getElementById('labelHint5').textContent = "For Fun: This player was drafted by the New York Knicks of the Basketball Association of America (BAA). But a different team -- the Syracuse Nationals of the National Basketball League (NBL) -- were able to pay him more than the Knicks were allowed per BAA league salary cap rules. This player signed with the Syracuse Nationals of the NBL, and he played his whole career with this same team. When this player was drafted, the BAA and NBL were two separate leagues. But they would merge and become The National Basketball Association (NBA) just one year after he was drafted. The Syracuse Nationals who would later move and become the Philadelphie 76ers.";
         }
     });
     </script>
@@ -384,7 +384,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/11-20-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/11-21-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -416,7 +416,7 @@
     const userInput = document.getElementById('playerName').value.trim();
     let resultsDiv = document.getElementById('results');
 
-    if (userInput.toLowerCase() === 'bob cousy') {
+    if (userInput.toLowerCase() === 'dolph schayes') {
         // Display the "Correct Answer" modal
         const correctAnswerModal = $('#correctAnswerModal');
         

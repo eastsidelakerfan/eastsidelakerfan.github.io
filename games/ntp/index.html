@@ -194,7 +194,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>11-21-23</em></p>
+    <p style="color: gray;" class="text-center"><em>11-22-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -354,27 +354,27 @@
     // Define answer
     document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint1').textContent = "School: NYU";
+            document.getElementById('labelHint1').textContent = "School: Villanova";
         }
     });
     document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint2').textContent = "Nickname: the Rainbow Kid, Dolly";
+            document.getElementById('labelHint2').textContent = "Nickname: Pitchin' Paul";
         }
     });
     document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint3').textContent = "Born in: New York, NY";
+            document.getElementById('labelHint3').textContent = "Born in: Philadelphia, PA";
         }
     });
     document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint4').textContent = "Rookie Year Team: Syracuse Nationals";
+            document.getElementById('labelHint4').textContent = "Rookie Year Team: Philadelphia Warriors";
         }
     });
         document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint5').textContent = "For Fun: This player was drafted by the New York Knicks of the Basketball Association of America (BAA). But a different team -- the Syracuse Nationals of the National Basketball League (NBL) -- were able to pay him more than the Knicks were allowed per BAA league salary cap rules. This player signed with the Syracuse Nationals of the NBL, and he played his whole career with this same team. When this player was drafted, the BAA and NBL were two separate leagues. But they would merge and become The National Basketball Association (NBA) just one year after he was drafted. The Syracuse Nationals who would later move and become the Philadelphie 76ers.";
+            document.getElementById('labelHint5').textContent = "For Fun: This player was born in the same city and played for the same team his rookie year as Wilt Chamberlain. Note that in this player's second professional season, he was able to lead the NBA in FG% at just 45%. In 2023, there are roughly 100 players who are shooting better than 45% from the field.";
         }
     });
     </script>
@@ -384,7 +384,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/11-21-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/11-22-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -416,7 +416,7 @@
     const userInput = document.getElementById('playerName').value.trim();
     let resultsDiv = document.getElementById('results');
 
-    if (userInput.toLowerCase() === 'dolph schayes') {
+    if (userInput.toLowerCase() === 'paul arizin') {
         // Display the "Correct Answer" modal
         const correctAnswerModal = $('#correctAnswerModal');
         

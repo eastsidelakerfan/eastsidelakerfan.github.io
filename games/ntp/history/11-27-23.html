@@ -194,7 +194,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>11-24-23</em></p>
+    <p style="color: gray;" class="text-center"><em>11-27-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -384,7 +384,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/11-24-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/11-27-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -416,7 +416,7 @@
     const userInput = document.getElementById('playerName').value.trim();
     let resultsDiv = document.getElementById('results');
 
-    if (userInput.toLowerCase() === 'jack twyman') {
+    if (userInput.toLowerCase() === 'steve nash') {
         // Display the "Correct Answer" modal
         const correctAnswerModal = $('#correctAnswerModal');
         

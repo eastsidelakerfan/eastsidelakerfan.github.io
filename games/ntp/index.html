@@ -194,7 +194,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>11-22-23</em></p>
+    <p style="color: gray;" class="text-center"><em>11-23-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -354,27 +354,27 @@
     // Define answer
     document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint1').textContent = "School: Villanova";
+            document.getElementById('labelHint1').textContent = "School: LSU";
         }
     });
     document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint2').textContent = "Nickname: Pitchin' Paul";
+            document.getElementById('labelHint2').textContent = "Nickname: The Bombardier from Baton Rouge";
         }
     });
     document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint3').textContent = "Born in: Philadelphia, PA";
+            document.getElementById('labelHint3').textContent = "Born in: Baton Rouge, Louisiana";
         }
     });
     document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint4').textContent = "Rookie Year Team: Philadelphia Warriors";
+            document.getElementById('labelHint4').textContent = "Rookie Year Team: Milwaukee Hawks (coached by Red Holzman)";
         }
     });
         document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint5').textContent = "For Fun: This player did not play organized basketball in High School because he failed to ever make the team (his only tryout was as a senior). During his freshman year of college, this player played in a local CYO (Catholic Youth Organization) basketball league. Al Severance (the Villanova varsity basketball coach) attended one of the CYO games. After the game, Severance approached this player and asked if he would like to go to Villanova, to which he answered: I already go to Villanova! The player made the college team in 1947, his sophomore year, and played for three years.";
+            document.getElementById('labelHint5').textContent = "For Fun: This player was an All-Star in each of his 11 seasons. He retired at age 32 as the NBA's all time leading scorer.";
         }
     });
     </script>
@@ -384,7 +384,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/11-22-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/11-23-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -416,7 +416,7 @@
     const userInput = document.getElementById('playerName').value.trim();
     let resultsDiv = document.getElementById('results');
 
-    if (userInput.toLowerCase() === 'paul arizin') {
+    if (userInput.toLowerCase() === 'bob pettit') {
         // Display the "Correct Answer" modal
         const correctAnswerModal = $('#correctAnswerModal');
         

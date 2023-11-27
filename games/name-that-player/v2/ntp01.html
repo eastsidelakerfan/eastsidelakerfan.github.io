@@ -339,6 +339,7 @@ tr:hover {background-color: #D6EEEE;}
 
 </div>
 
+
 </div>
 
     <div id="results"></div> 
@@ -474,7 +475,7 @@ document.getElementById('playerName').addEventListener('input', function() {
 
     // If user input is 3 characters or more, fetch names and populate datalist
     if (inputValue.length >= 3) {
-        fetch('https://drewwolin.com/games/name-that-player/v2/autocomplete-names.txt')
+        fetch('https://namethatplayer.com/autocomplete-names.txt')
             .then(response => response.text())
             .then(data => {
                 const players = data.split('\n');

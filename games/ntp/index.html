@@ -194,7 +194,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>11-24-23</em></p>
+    <p style="color: gray;" class="text-center"><em>11-27-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -239,11 +239,22 @@
                         <th>FG</th>
                         <th>FGA</th>
                         <th>FG%</th>
+                        <th class="narrow-column">3PM</th>
+                        <th>3PA</th>
+                        <th>3P%</th>
+                        <th>2PM</th>
+                        <th>2PA</th>
+                        <th>2P%</th>
                         <th>FTM</th>
                         <th>FTA</th>
                         <th>FT%</th>
+                        <th>OREB</th>
+                        <th>DREB</th>
                         <th>REB</th>
                         <th>AST</th>
+                        <th class="narrow-column">STL</th>
+                        <th class="narrow-column">BLK</th>
+                        <th class="narrow-column">TOV</th>
                         <th class="narrow-column">PF</th>
                         <th>PTS</th>
                     </tr>
@@ -354,27 +365,27 @@
     // Define answer
     document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint1').textContent = "School: Cincinnati";
+            document.getElementById('labelHint1').textContent = "School: Santa Clara";
         }
     });
     document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint2').textContent = "Nickname: N/A";
+            document.getElementById('labelHint2').textContent = "Nickname: Two Time";
         }
     });
     document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint3').textContent = "Born in: Pittsburgh, PA";
+            document.getElementById('labelHint3').textContent = "Born in: Johannesburg, South Africa";
         }
     });
     document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint4').textContent = "Rookie Year Team: Rochester Royals";
+            document.getElementById('labelHint4').textContent = "Rookie Year Team: Suns";
         }
     });
         document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint5').textContent = "Drew (Name that Player founder) used to play basketball with this player's grandson!";
+            document.getElementById('labelHint5').textContent = "Although born in South Africa, holds Canadian citizenship and is widely regarded as the best Canadian basketball player ever!";
         }
     });
     </script>
@@ -384,7 +395,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/11-24-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/11-27-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -416,7 +427,7 @@
     const userInput = document.getElementById('playerName').value.trim();
     let resultsDiv = document.getElementById('results');
 
-    if (userInput.toLowerCase() === 'jack twyman') {
+    if (userInput.toLowerCase() === 'steve nash') {
         // Display the "Correct Answer" modal
         const correctAnswerModal = $('#correctAnswerModal');
         

@@ -194,7 +194,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>11-27-23</em></p>
+    <p style="color: gray;" class="text-center"><em>11-28-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -365,27 +365,27 @@
     // Define answer
     document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint1').textContent = "School: Santa Clara";
+            document.getElementById('labelHint1').textContent = "School: California";
         }
     });
     document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint2').textContent = "Nickname: Two Time";
+            document.getElementById('labelHint2').textContent = "Nickname: the Engine";
         }
     });
     document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint3').textContent = "Born in: Johannesburg, South Africa";
+            document.getElementById('labelHint3').textContent = "Born in: San Francisco, CA";
         }
     });
     document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint4').textContent = "Rookie Year Team: Suns";
+            document.getElementById('labelHint4').textContent = "Rookie Year Team: Dallas Mavericks";
         }
     });
         document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint5').textContent = "Although born in South Africa, holds Canadian citizenship and is widely regarded as the best Canadian basketball player ever!";
+            document.getElementById('labelHint5').textContent = "This player was an all-star in: 1996 but not 1997; 1998 but not 1999; 2000-2004 but not 2005-2006; 2007-2008 but not 2009; and 2010 but not 2011.";
         }
     });
     </script>
@@ -395,7 +395,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/11-27-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/11-28-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -427,7 +427,7 @@
     const userInput = document.getElementById('playerName').value.trim();
     let resultsDiv = document.getElementById('results');
 
-    if (userInput.toLowerCase() === 'steve nash') {
+    if (userInput.toLowerCase() === 'jason kidd') {
         // Display the "Correct Answer" modal
         const correctAnswerModal = $('#correctAnswerModal');
         

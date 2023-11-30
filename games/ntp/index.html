@@ -194,7 +194,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>11-29-23</em></p>
+    <p style="color: gray;" class="text-center"><em>11-30-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -370,22 +370,22 @@
     });
     document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint2').textContent = "Nickname: Jet";
+            document.getElementById('labelHint2').textContent = "Nickname: the Hibachi";
         }
     });
     document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint3').textContent = "Born in: Seattle, WA";
+            document.getElementById('labelHint3').textContent = "Born in: Tampa, Florida";
         }
     });
     document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint4').textContent = "Rookie Year Team: Atlanta Hawks";
+            document.getElementById('labelHint4').textContent = "Rookie Year Team: GSW";
         }
     });
         document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint5').textContent = "This player is cousin to former NBA player Martell Webster and was known for wearing a headband.";
+            document.getElementById('labelHint5').textContent = "Earned a trip to the NCAA Final 4 and final, where his team ultimately fell short to a Shane Battier-led Duke team which also included Mike Dunleavy Jr, Jason Williams, and Chris Duhon. Richard Jefferson was a college teammate of this player's.";
         }
     });
     </script>
@@ -395,7 +395,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/11-29-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/11-30-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -427,7 +427,7 @@
     const userInput = document.getElementById('playerName').value.trim();
     let resultsDiv = document.getElementById('results');
 
-    if (userInput.toLowerCase() === 'jason terry') {
+    if (userInput.toLowerCase() === 'gilbert arenas') {
         // Display the "Correct Answer" modal
         const correctAnswerModal = $('#correctAnswerModal');
         

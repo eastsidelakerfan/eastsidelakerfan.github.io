@@ -194,7 +194,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>12-04-23</em></p>
+    <p style="color: gray;" class="text-center"><em>12-05-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -365,27 +365,27 @@
     // Define answer
     document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint1').textContent = "School: UCONN";
+            document.getElementById('labelHint1').textContent = "School: Washington";
         }
     });
     document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint2').textContent = "Nickname: Gentleman, Skinny Walt";
+            document.getElementById('labelHint2').textContent = "Nickname: the Natural";
         }
     });
     document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint3').textContent = "Born in: Merced, CA";
+            document.getElementById('labelHint3').textContent = "Born in: Seattle, WA";
         }
     });
     document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint4').textContent = "Rookie Year Team: MIL";
+            document.getElementById('labelHint4').textContent = "Rookie Year Team: POR";
         }
     });
         document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint5').textContent = "This player was a member of the absolutely elite 1996 NBA draft class. He was 5th pick. 5 of the top 6 picks in this draft were NBA All-Stars. And the 6th (meaning the one player who was not an All Star, not necessarily the 6th pick) won the 2007 Defensive Player of the Year award.";
+            document.getElementById('labelHint5').textContent = "After retiring, this player would start coaching high school basketball. Michael Porter Jr. was just one of many talented players he coached.";
         }
     });
     </script>
@@ -395,7 +395,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/12-04-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/12-05-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -427,7 +427,7 @@
     const userInput = document.getElementById('playerName').value.trim();
     let resultsDiv = document.getElementById('results');
 
-    if (userInput.toLowerCase() === 'ray allen') {
+    if (userInput.toLowerCase() === 'brandon roy') {
         // Display the "Correct Answer" modal
         const correctAnswerModal = $('#correctAnswerModal');
         

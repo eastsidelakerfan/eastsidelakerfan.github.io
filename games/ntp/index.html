@@ -194,7 +194,7 @@
     <!-- First line of page below navbar -->
     <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
     <h1 style="text-align: center;">Name that Player!</h1>
-    <p style="color: gray;" class="text-center"><em>12-05-23</em></p>
+    <p style="color: gray;" class="text-center"><em>12-06-23</em></p>
     
     <div class="countdown-box">
         <div id="countdown" class="text-primary"></div>
@@ -365,27 +365,27 @@
     // Define answer
     document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint1').textContent = "School: Washington";
+            document.getElementById('labelHint1').textContent = "School: Ohio State";
         }
     });
     document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint2').textContent = "Nickname: the Natural";
+            document.getElementById('labelHint2').textContent = "Nickname: (Name) Hot";
         }
     });
     document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint3').textContent = "Born in: Seattle, WA";
+            document.getElementById('labelHint3').textContent = "Born in: Columbus, OH";
         }
     });
     document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint4').textContent = "Rookie Year Team: POR";
+            document.getElementById('labelHint4').textContent = "Rookie Year Team: MIL";
         }
     });
         document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
         if (this.checked) {
-            document.getElementById('labelHint5').textContent = "Fun Fact: After retiring, this player would start coaching high school basketball. Michael Porter Jr. was just one of many talented players he coached.";
+            document.getElementById('labelHint5').textContent = "This lefty played all but one season -- his final season -- with the same NBA team.";
         }
     });
     </script>
@@ -395,7 +395,7 @@
     <script>
         // Logic to set up the table
         window.onload = function() {
-            fetch('https://drewwolin.com/games/ntp/assets/stats/12-05-23.csv')
+            fetch('https://drewwolin.com/games/ntp/assets/stats/12-06-23.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data, {
@@ -427,7 +427,7 @@
     const userInput = document.getElementById('playerName').value.trim();
     let resultsDiv = document.getElementById('results');
 
-    if (userInput.toLowerCase() === 'brandon roy') {
+    if (userInput.toLowerCase() === 'michael redd') {
         // Display the "Correct Answer" modal
         const correctAnswerModal = $('#correctAnswerModal');
         

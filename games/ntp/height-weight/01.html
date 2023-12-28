@@ -141,14 +141,18 @@
         </div>
         
 
-    <br><br>
+    <br>
 
         <span id="weightDisplay" style="display: block; margin: 0 auto; text-align: center;">200</span>
         <div class="center-container">
             <label for="weightRange">Weight: </label>
             <input type="range" class="custom-range" min="0" max="400" step="1" id="weightRange">
-        </div>
+        </div><br>
         
+        <div class="center-container">
+            <button type="button" id="submitGuess" class="btn btn-primary">Submit Guess</button>
+        </div>
+
 
 
 
@@ -204,6 +208,21 @@
             // Display the height in a span or div
             document.getElementById('weightDisplay').textContent = displayWeight;
         };
+
+        document.getElementById('submitGuess').onclick = function() {
+            var heightValue = parseInt(document.getElementById('heightRange').value);
+            var weightValue = parseInt(document.getElementById('weightRange').value);
+
+            var correctHeight = (heightValue >= 6 && heightValue <= 8); // Acceptable height: 6-6 to 6-8
+            var correctWeight = (weightValue >= 280 && weightValue <= 299); // Acceptable weight: 280 - 299 lbs
+
+            if (correctHeight && correctWeight) {
+                alert('Correct! Great job!');
+            } else {
+                alert('Incorrect. Try again!');
+            }
+        };
+
         </script>
 
 

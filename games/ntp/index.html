@@ -197,7 +197,7 @@ Check back weekdays for new daily challenges.
 <!-- First line of page below navbar -->
 <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
 <h1 style="text-align: center;">Name that Player!</h1>
-<p style="color: gray;" class="text-center"><em>12-29-23</em></p>
+<p style="color: gray;" class="text-center"><em>01-01-24</em></p>
 
 <div class="countdown-box">
 <div id="countdown" class="text-primary"></div>
@@ -368,27 +368,27 @@ this.disabled = true;
 // Define answer
 document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint1').textContent = "School: N/A";
+document.getElementById('labelHint1').textContent = "School: Lake Wales in Lake Wales, Florida, Mt. Zion Christian Academy in Durham, North Carolina, Emmanuel Christian Academy in Durham, North Carolina, West Orange in Winter Garden, Florida - attended but did not play, Cypress Creek in Orlando, Florida";
 }
 });
 document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint2').textContent = "Nickname: (The name he goes by is technically already a nickname, essentially a shortened spelling of his real name)";
+document.getElementById('labelHint2').textContent = "Nickname: S.T.A.T.";
 }
 });
 document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint3').textContent = "Born in: Slavonska Pozega, Croatia";
+document.getElementById('labelHint3').textContent = "Born in: Lake Wales, Florida";
 }
 });
 document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint4').textContent = "Rookie Year Team: SAC";
+document.getElementById('labelHint4').textContent = "Rookie Year Team: PHX";
 }
 });
 document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint5').textContent = "For Fun: This player's son was a 5-star recruit and currently (in 2023) a standout freshman for Stanford's men's hoops team.";
+document.getElementById('labelHint5').textContent = "For Fun: This player is known for bathing and wine and converting to Judaism (perhaps unrelated).";
 }
 });
 </script>
@@ -398,7 +398,7 @@ document.getElementById('labelHint5').textContent = "For Fun: This player's son 
 <script>
 // Logic to set up the table
 window.onload = function() {
-fetch('https://drewwolin.com/games/ntp/assets/stats/12-29-23.csv')
+fetch('https://drewwolin.com/games/ntp/assets/stats/01-01-24.csv')
 .then(response => response.text())
 .then(data => {
 const parsedData = Papa.parse(data, {
@@ -430,7 +430,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 const userInput = document.getElementById('playerName').value.trim();
 let resultsDiv = document.getElementById('results');
 
-if (userInput.toLowerCase() === 'peja stojakovic') {
+if (userInput.toLowerCase() === 'amare stoudemire') {
 // Display the "Correct Answer" modal
 const correctAnswerModal = $('#correctAnswerModal');
 

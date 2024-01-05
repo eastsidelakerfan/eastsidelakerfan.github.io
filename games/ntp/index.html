@@ -197,7 +197,7 @@ Check back weekdays for new daily challenges.
 <!-- First line of page below navbar -->
 <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
 <h1 style="text-align: center;">Name that Player!</h1>
-<p style="color: gray;" class="text-center"><em>01-04-24</em></p>
+<p style="color: gray;" class="text-center"><em>01-05-24</em></p>
 
 <div class="countdown-box">
 <div id="countdown" class="text-primary"></div>
@@ -368,27 +368,27 @@ this.disabled = true;
 // Define answer
 document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint1').textContent = "School: Cuyahoga CC (1992–1994), Virginia Union (1994–1996)";
+document.getElementById('labelHint1').textContent = "School: Michigan State";
 }
 });
 document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint2').textContent = "Nickname: Body, Debo";
+document.getElementById('labelHint2').textContent = "Nickname: Z";
 }
 });
 document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint3').textContent = "Born in: White Hall, Alabama";
+document.getElementById('labelHint3').textContent = "Born in: Marion, Indiana ";
 }
 });
 document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint4').textContent = "Rookie Year Team: WAS";
+document.getElementById('labelHint4').textContent = "Rookie Year Team: POR";
 }
 });
 document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint5').textContent = "For Fun: There was a brief clip that used to run on NBA TV where this player could be seen easily bicep curling 100 pound dumbbells -- in each arm!";
+document.getElementById('labelHint5').textContent = "For Fun: This player was arrested numerous times as a child, and had a reputation as a troublemaker early in his NBA career. But despite this, he was a fan favorite and a cultural icon of sorts.";
 }
 });
 </script>
@@ -398,7 +398,7 @@ document.getElementById('labelHint5').textContent = "For Fun: There was a brief 
 <script>
 // Logic to set up the table
 window.onload = function() {
-fetch('https://drewwolin.com/games/ntp/assets/stats/01-04-24.csv')
+fetch('https://drewwolin.com/games/ntp/assets/stats/01-05-24.csv')
 .then(response => response.text())
 .then(data => {
 const parsedData = Papa.parse(data, {
@@ -430,7 +430,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 const userInput = document.getElementById('playerName').value.trim();
 let resultsDiv = document.getElementById('results');
 
-if (userInput.toLowerCase() === 'ben wallace') {
+if (userInput.toLowerCase() === 'zach randolph') {
 // Display the "Correct Answer" modal
 const correctAnswerModal = $('#correctAnswerModal');
 

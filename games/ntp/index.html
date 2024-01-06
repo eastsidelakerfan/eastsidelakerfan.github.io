@@ -113,27 +113,11 @@ Check back weekdays for new daily challenges.
 </div>
 </li>
 
-<li class="nav-item active">
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#historyModal">History</button>
 
-<!-- Modal -->
-<div class="modal fade" id="historyModal" tabindex="-1" role="dialog" aria-labelledby="historyModalTitle" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-<div class="modal-content bg-primary">
-<div class="modal-header">
-<h5 class="modal-title" id="historyModalTitle" style="color: white;">History</h5>
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body" style="background-color: whitesmoke;">
-<a href="https://drewwolin.com/games/ntp/history/history.html" target="_blank">Click here to visit the history page</a>
-</div>
-<div class="modal-footer">
-</div>
-</div>
-</div>
-</div>
+<li class="nav-item active">
+    <button type="button" class="btn btn-primary" id="historyButton">History</button>
 </li>
+
 
 <li class="nav-item active">
 <!-- Button trigger modal -->
@@ -600,6 +584,25 @@ startCountdown(120);
         }
     });
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to redirect to the new page
+        function redirectToHistoryPage() {
+            // Replace 'yourURLhere' with the actual URL you want to navigate to
+            window.location.href = 'https://drewwolin.com/games/ntp/history/history.html';
+        }
+
+        // Attach the function to the button
+        const historyButton = document.getElementById('historyButton');
+        if (historyButton) {
+            historyButton.addEventListener('click', redirectToHistoryPage);
+        } else {
+            console.error('History button not found!');
+        }
+    });
+</script>
+
 
 
 

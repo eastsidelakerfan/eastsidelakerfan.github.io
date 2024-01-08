@@ -21,8 +21,6 @@ gtag('js', new Date());
 gtag('config', 'G-GSBCCY1SVS');
 </script>
 
-<meta name="google-adsense-account" content="ca-pub-9358806105469090">
-
 <meta charset="utf-8">
 
 <!-- Sets the viewport to make site responsive on all devices. -->
@@ -113,11 +111,27 @@ Check back weekdays for new daily challenges.
 </div>
 </li>
 
-
 <li class="nav-item active">
-    <button type="button" class="btn btn-primary" id="historyButton">History</button>
-</li>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#historyModal">History</button>
 
+<!-- Modal -->
+<div class="modal fade" id="historyModal" tabindex="-1" role="dialog" aria-labelledby="historyModalTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content bg-primary">
+<div class="modal-header">
+<h5 class="modal-title" id="historyModalTitle" style="color: white;">History</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body" style="background-color: whitesmoke;">
+<a href="https://drewwolin.com/games/ntp/history/history.html" target="_blank">Click here to visit the history page</a>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+</li>
 
 <li class="nav-item active">
 <!-- Button trigger modal -->
@@ -168,12 +182,6 @@ Check back weekdays for new daily challenges.
 </div>
 </div>
 </li>
-
-<li class="nav-item active">
-<!-- Button-->
-<button type="button" class="btn btn-primary" id="randomButton">Random</button>
-</li>
-
 </ul>
 
 <div class="ms-auto">
@@ -189,7 +197,7 @@ Check back weekdays for new daily challenges.
 <!-- First line of page below navbar -->
 <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
 <h1 style="text-align: center;">Name that Player!</h1>
-<p style="color: gray;" class="text-center"><em>01-05-24</em></p>
+<p style="color: gray;" class="text-center"><em>01-08-24</em></p>
 
 <div class="countdown-box">
 <div id="countdown" class="text-primary"></div>
@@ -360,27 +368,27 @@ this.disabled = true;
 // Define answer
 document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint1').textContent = "School: Michigan State";
+document.getElementById('labelHint1').textContent = "School: Thornwood HS";
 }
 });
 document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint2').textContent = "Nickname: Z";
+document.getElementById('labelHint2').textContent = "Nickname: Baby Shaq";
 }
 });
 document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint3').textContent = "Born in: Marion, Indiana ";
+document.getElementById('labelHint3').textContent = "Born in: Harvey, Illinois";
 }
 });
 document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint4').textContent = "Rookie Year Team: POR";
+document.getElementById('labelHint4').textContent = "Rookie Year Team: CHI";
 }
 });
 document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint5').textContent = "For Fun: This player was arrested numerous times as a child, and had a reputation as a troublemaker early in his NBA career. But despite this, he was a fan favorite and a cultural icon of sorts.";
+document.getElementById('labelHint5').textContent = "For Fun: This player, whose reputation was not necessarily as a "winning player," won an NBA championship with the Miami Heat in 2012.";
 }
 });
 </script>
@@ -390,7 +398,7 @@ document.getElementById('labelHint5').textContent = "For Fun: This player was ar
 <script>
 // Logic to set up the table
 window.onload = function() {
-fetch('https://drewwolin.com/games/ntp/assets/stats/01-05-24.csv')
+fetch('https://drewwolin.com/games/ntp/assets/stats/01-08-24.csv')
 .then(response => response.text())
 .then(data => {
 const parsedData = Papa.parse(data, {
@@ -422,7 +430,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 const userInput = document.getElementById('playerName').value.trim();
 let resultsDiv = document.getElementById('results');
 
-if (userInput.toLowerCase() === 'zach randolph') {
+if (userInput.toLowerCase() === 'eddy curry') {
 // Display the "Correct Answer" modal
 const correctAnswerModal = $('#correctAnswerModal');
 
@@ -550,60 +558,6 @@ startCountdown(120);
 
 
 </script>
-
-<script>
-    // Define the list of URLs
-    const urls = [
-        'https://drewwolin.com/games/ntp/history/11-06-23.html',
-        'https://drewwolin.com/games/ntp/history/11-07-23.html',
-        'https://drewwolin.com/games/ntp/history/11-08-23.html',
-        'https://drewwolin.com/games/ntp/history/11-09-23.html',
-        'https://drewwolin.com/games/ntp/history/11-10-23.html'
-    ];
-
-    // Function to select a random URL from the list
-    function selectRandomUrl() {
-        const randomIndex = Math.floor(Math.random() * urls.length);
-        const selectedUrl = urls[randomIndex];
-
-        // Debugging
-        console.log('Selected URL:', selectedUrl);
-
-        // Redirect to the selected URL
-        window.location.href = selectedUrl;
-    }
-
-    // Wait for the DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        // Change the selector if necessary to target the specific button
-        const randomButton = document.querySelector('button#randomButton'); // Assuming the button has an ID 'randomButton'
-        if (randomButton) {
-            randomButton.addEventListener('click', selectRandomUrl);
-        } else {
-            console.error('Random button not found!');
-        }
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Function to redirect to the new page
-        function redirectToHistoryPage() {
-            // Replace 'yourURLhere' with the actual URL you want to navigate to
-            window.location.href = 'https://drewwolin.com/games/ntp/history/history.html';
-        }
-
-        // Attach the function to the button
-        const historyButton = document.getElementById('historyButton');
-        if (historyButton) {
-            historyButton.addEventListener('click', redirectToHistoryPage);
-        } else {
-            console.error('History button not found!');
-        }
-    });
-</script>
-
-
 
 
 

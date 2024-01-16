@@ -197,7 +197,7 @@ Check back weekdays for new daily challenges.
 <!-- First line of page below navbar -->
 <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
 <h1 style="text-align: center;">Name that Player!</h1>
-<p style="color: gray;" class="text-center"><em>01-15-24</em></p>
+<p style="color: gray;" class="text-center"><em>01-16-24</em></p>
 
 <div class="countdown-box">
 <div id="countdown" class="text-primary"></div>
@@ -368,27 +368,27 @@ this.disabled = true;
 // Define answer
 document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint1').textContent = "School: University of Memphis";
+document.getElementById('labelHint1').textContent = "School: University of Alabama";
 }
 });
 document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint2').textContent = "Nickname: Penny";
+document.getElementById('labelHint2').textContent = "Nickname: Spree";
 }
 });
 document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint3').textContent = "Born in: Memphis, Tennessee";
+document.getElementById('labelHint3').textContent = "Born in: Milwaukee, Wisconsin";
 }
 });
 document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint4').textContent = "Rookie Year Team: Orlando Magic";
+document.getElementById('labelHint4').textContent = "Rookie Year Team: Golden State Warriors";
 }
 });
 document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint5').textContent = "For Fun: Survived a gunshot wound to the foot before his college career, and briefly owned a minor league baseball team and held a Slam Dunk Contest during halftime of their games.";
+document.getElementById('labelHint5').textContent = "For Fun: Once choked his coach, P.J. Carlesimo, during practice, leading to a lengthy suspension and a significant dent in his reputation.";
 }
 });
 </script>
@@ -398,7 +398,7 @@ document.getElementById('labelHint5').textContent = "For Fun: Survived a gunshot
 <script>
 // Logic to set up the table
 window.onload = function() {
-fetch('https://drewwolin.com/games/ntp/assets/stats/01-15-24.csv')
+fetch('https://drewwolin.com/games/ntp/assets/stats/01-16-24.csv')
 .then(response => response.text())
 .then(data => {
 const parsedData = Papa.parse(data, {
@@ -430,7 +430,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 const userInput = document.getElementById('playerName').value.trim();
 let resultsDiv = document.getElementById('results');
 
-if (userInput.toLowerCase() === 'anfernee hardaway') {
+if (userInput.toLowerCase() === 'latrell sprewell') {
 // Display the "Correct Answer" modal
 const correctAnswerModal = $('#correctAnswerModal');
 

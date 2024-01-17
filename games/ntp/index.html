@@ -197,7 +197,7 @@ Check back weekdays for new daily challenges.
 <!-- First line of page below navbar -->
 <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
 <h1 style="text-align: center;">Name that Player!</h1>
-<p style="color: gray;" class="text-center"><em>01-16-24</em></p>
+<p style="color: gray;" class="text-center"><em>01-17-24</em></p>
 
 <div class="countdown-box">
 <div id="countdown" class="text-primary"></div>
@@ -368,27 +368,27 @@ this.disabled = true;
 // Define answer
 document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint1').textContent = "School: University of Alabama";
+document.getElementById('labelHint1').textContent = "School: Duke University";
 }
 });
 document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint2').textContent = "Nickname: (A shortened version of his last name)";
+document.getElementById('labelHint2').textContent = "Nickname: N/A";
 }
 });
 document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint3').textContent = "Born in: Milwaukee, Wisconsin";
+document.getElementById('labelHint3').textContent = "Born in: Dallas, Texas";
 }
 });
 document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint4').textContent = "Rookie Year Team: Golden State Warriors";
+document.getElementById('labelHint4').textContent = "Rookie Year Team: Detroit Pistons";
 }
 });
 document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint5').textContent = "For Fun: Once choked his coach, P.J. Carlesimo, during practice, leading to a lengthy suspension and a significant dent in his reputation.";
+document.getElementById('labelHint5').textContent = "For Fun: Co-owns the Atlanta Hawks and Orlando City MLS team with his wife, Tamia.";
 }
 });
 </script>
@@ -398,7 +398,7 @@ document.getElementById('labelHint5').textContent = "For Fun: Once choked his co
 <script>
 // Logic to set up the table
 window.onload = function() {
-fetch('https://drewwolin.com/games/ntp/assets/stats/01-16-24.csv')
+fetch('https://drewwolin.com/games/ntp/assets/stats/01-17-24.csv')
 .then(response => response.text())
 .then(data => {
 const parsedData = Papa.parse(data, {
@@ -430,7 +430,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 const userInput = document.getElementById('playerName').value.trim();
 let resultsDiv = document.getElementById('results');
 
-if (userInput.toLowerCase() === 'latrell sprewell') {
+if (userInput.toLowerCase() === 'grant hill') {
 // Display the "Correct Answer" modal
 const correctAnswerModal = $('#correctAnswerModal');
 

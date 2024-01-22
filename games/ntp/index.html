@@ -197,7 +197,7 @@ Check back weekdays for new daily challenges.
 <!-- First line of page below navbar -->
 <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
 <h1 style="text-align: center;">Name that Player!</h1>
-<p style="color: gray;" class="text-center"><em>01-19-24</em></p>
+<p style="color: gray;" class="text-center"><em>01-22-24</em></p>
 
 <div class="countdown-box">
 <div id="countdown" class="text-primary"></div>
@@ -368,27 +368,27 @@ this.disabled = true;
 // Define answer
 document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint1').textContent = "School: Georgetown University";
+document.getElementById('labelHint1').textContent = "School: Oregon State University";
 }
 });
 document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint2').textContent = "Nickname: (Shortened version of his first name)";
+document.getElementById('labelHint2').textContent = "Nickname: The Glove";
 }
 });
 document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint3').textContent = "Born in: Chesapeake, Virginia";
+document.getElementById('labelHint3').textContent = "Born in: Oakland, California";
 }
 });
 document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint4').textContent = "Rookie Year Team: Charlotte Hornets";
+document.getElementById('labelHint4').textContent = "Rookie Year Team: Seattle SuperSonics (1990)";
 }
 });
 document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint5').textContent = "For Fun: Returned to play after undergoing a kidney transplant.";
+document.getElementById('labelHint5').textContent = "For Fun: Known for his trash-talking, once told Michael Jordan, \'I'm the best point guard in the league.\' Jordan\'s response? \'I agree.\'";
 }
 });
 </script>
@@ -398,7 +398,7 @@ document.getElementById('labelHint5').textContent = "For Fun: Returned to play a
 <script>
 // Logic to set up the table
 window.onload = function() {
-fetch('https://drewwolin.com/games/ntp/assets/stats/01-19-24.csv')
+fetch('https://drewwolin.com/games/ntp/assets/stats/01-22-24.csv')
 .then(response => response.text())
 .then(data => {
 const parsedData = Papa.parse(data, {
@@ -430,7 +430,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 const userInput = document.getElementById('playerName').value.trim();
 let resultsDiv = document.getElementById('results');
 
-if (userInput.toLowerCase() === 'alonzo mourning') {
+if (userInput.toLowerCase() === 'gary payton') {
 // Display the "Correct Answer" modal
 const correctAnswerModal = $('#correctAnswerModal');
 

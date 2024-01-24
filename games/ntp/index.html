@@ -197,7 +197,7 @@ Check back weekdays for new daily challenges.
 <!-- First line of page below navbar -->
 <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
 <h1 style="text-align: center;">Name that Player!</h1>
-<p style="color: gray;" class="text-center"><em>01-23-24</em></p>
+<p style="color: gray;" class="text-center"><em>01-24-24</em></p>
 
 <div class="countdown-box">
 <div id="countdown" class="text-primary"></div>
@@ -368,27 +368,27 @@ this.disabled = true;
 // Define answer
 document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint1').textContent = "School: Kansas State University";
+document.getElementById('labelHint1').textContent = "School: University of Houston";
 }
 });
 document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint2').textContent = "Nickname: The Rock";
+document.getElementById('labelHint2').textContent = "Nickname: the Glide";
 }
 });
 document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint3').textContent = "Born in: Fort Lauderdale, Florida";
+document.getElementById('labelHint3').textContent = "Born in: New Orleans, Louisiana";
 }
 });
 document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint4').textContent = "Rookie Year Team: Golden State Warriors (1988)";
+document.getElementById('labelHint4').textContent = "Rookie Year Team: Portland Trail Blazers (1983)";
 }
 });
 document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint5').textContent = "For Fun: Key member of the 'Run TMC' era in Golden State, and won an NBA Championship as a member of the Lakers in 2002.";
+document.getElementById('labelHint5').textContent = "For Fun: Known for his high-flying style, part of 'Phi Slama Jama' team.";
 }
 });
 </script>
@@ -398,7 +398,7 @@ document.getElementById('labelHint5').textContent = "For Fun: Key member of the 
 <script>
 // Logic to set up the table
 window.onload = function() {
-fetch('https://drewwolin.com/games/ntp/assets/stats/01-23-24.csv')
+fetch('https://drewwolin.com/games/ntp/assets/stats/01-24-24.csv')
 .then(response => response.text())
 .then(data => {
 const parsedData = Papa.parse(data, {
@@ -430,7 +430,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 const userInput = document.getElementById('playerName').value.trim();
 let resultsDiv = document.getElementById('results');
 
-if (userInput.toLowerCase() === 'mitch richmond') {
+if (userInput.toLowerCase() === 'clyde drexler') {
 // Display the "Correct Answer" modal
 const correctAnswerModal = $('#correctAnswerModal');
 

@@ -197,7 +197,7 @@ Check back weekdays for new daily challenges.
 <!-- First line of page below navbar -->
 <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
 <h1 style="text-align: center;">Name that Player!</h1>
-<p style="color: gray;" class="text-center"><em>01-24-24</em></p>
+<p style="color: gray;" class="text-center"><em>01-25-24</em></p>
 
 <div class="countdown-box">
 <div id="countdown" class="text-primary"></div>
@@ -368,27 +368,27 @@ this.disabled = true;
 // Define answer
 document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint1').textContent = "School: University of Houston";
+document.getElementById('labelHint1').textContent = "School: Auburn University";
 }
 });
 document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint2').textContent = "Nickname: the Glide";
+document.getElementById('labelHint2').textContent = "Nickname: The Round Mound of Rebound";
 }
 });
 document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint3').textContent = "Born in: New Orleans, Louisiana";
+document.getElementById('labelHint3').textContent = "Born in: Leeds, Alabama";
 }
 });
 document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint4').textContent = "Rookie Year Team: Portland Trail Blazers (1983)";
+document.getElementById('labelHint4').textContent = "Rookie Year Team: Philadelphia 76ers (1984)";
 }
 });
 document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint5').textContent = "For Fun: Known for his high-flying style, part of 'Phi Slama Jama' team.";
+document.getElementById('labelHint5').textContent = "For Fun: Known for his rebounding prowess. Was once voted the "funniest man in sports" by ESPN and appeared in several comedic films and television shows.";
 }
 });
 </script>
@@ -398,7 +398,7 @@ document.getElementById('labelHint5').textContent = "For Fun: Known for his high
 <script>
 // Logic to set up the table
 window.onload = function() {
-fetch('https://drewwolin.com/games/ntp/assets/stats/01-24-24.csv')
+fetch('https://drewwolin.com/games/ntp/assets/stats/01-25-24.csv')
 .then(response => response.text())
 .then(data => {
 const parsedData = Papa.parse(data, {
@@ -430,7 +430,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 const userInput = document.getElementById('playerName').value.trim();
 let resultsDiv = document.getElementById('results');
 
-if (userInput.toLowerCase() === 'clyde drexler') {
+if (userInput.toLowerCase() === 'charles barkley') {
 // Display the "Correct Answer" modal
 const correctAnswerModal = $('#correctAnswerModal');
 

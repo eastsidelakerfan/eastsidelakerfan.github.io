@@ -197,7 +197,7 @@ Check back weekdays for new daily challenges.
 <!-- First line of page below navbar -->
 <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
 <h1 style="text-align: center;">Name that Player!</h1>
-<p style="color: gray;" class="text-center"><em>01-29-24</em></p>
+<p style="color: gray;" class="text-center"><em>01-30-24</em></p>
 
 <div class="countdown-box">
 <div id="countdown" class="text-primary"></div>
@@ -368,27 +368,27 @@ this.disabled = true;
 // Define answer
 document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint1').textContent = "School: Gonzaga University";
+document.getElementById('labelHint1').textContent = "School: UCLA";
 }
 });
 document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint2').textContent = "Nickname: (No nickname, but his name was used in very well known catchphrase related to his connection with a particular teammate)";
+document.getElementById('labelHint2').textContent = "Nickname: Knick Killer, Uncle Reg";
 }
 });
 document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint3').textContent = "Born in: Spokane, Washington, USA";
+document.getElementById('labelHint3').textContent = "Born in: Riverside, California, USA";
 }
 });
 document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint4').textContent = "Rookie Year Team: Utah Jazz";
+document.getElementById('labelHint4').textContent = "Rookie Year Team: Indiana Pacers";
 }
 });
 document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint5').textContent = "For Fun: This player ended his career as the NBA all-time leader in assists and steals​";
+document.getElementById('labelHint5').textContent = "For Fun: This player's unorthodox shooting style was developed to arc his shot over his sister's constant shot blocking. Also, once famously taunted the New York Knicks by putting them to sleep after hitting a game-winning shot over them in the playoffs.";
 }
 });
 </script>
@@ -398,7 +398,7 @@ document.getElementById('labelHint5').textContent = "For Fun: This player ended 
 <script>
 // Logic to set up the table
 window.onload = function() {
-fetch('https://drewwolin.com/games/ntp/assets/stats/01-29-24.csv')
+fetch('https://drewwolin.com/games/ntp/assets/stats/01-30-24.csv')
 .then(response => response.text())
 .then(data => {
 const parsedData = Papa.parse(data, {
@@ -430,7 +430,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 const userInput = document.getElementById('playerName').value.trim();
 let resultsDiv = document.getElementById('results');
 
-if (userInput.toLowerCase() === 'john stockton') {
+if (userInput.toLowerCase() === 'reggie miller') {
 // Display the "Correct Answer" modal
 const correctAnswerModal = $('#correctAnswerModal');
 

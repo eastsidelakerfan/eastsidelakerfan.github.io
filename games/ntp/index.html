@@ -197,7 +197,7 @@ Check back weekdays for new daily challenges.
 <!-- First line of page below navbar -->
 <h6 style="text-align: center;"><em>We show you career stats. You...</em></h6>
 <h1 style="text-align: center;">Name that Player!</h1>
-<p style="color: gray;" class="text-center"><em>02-01-24</em></p>
+<p style="color: gray;" class="text-center"><em>02-02-24</em></p>
 
 <div class="countdown-box">
 <div id="countdown" class="text-primary"></div>
@@ -368,27 +368,27 @@ this.disabled = true;
 // Define answer
 document.getElementById('flexSwitchCheckHint1').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint1').textContent = "School: Concord HS (IN); Trinity Valley CC (no NCAA play)";
+document.getElementById('labelHint1').textContent = "School: U.S. Naval Academy";
 }
 });
 document.getElementById('flexSwitchCheckHint2').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint2').textContent = "Nickname: Reign Man";
+document.getElementById('labelHint2').textContent = "Nickname: The Admiral";
 }
 });
 document.getElementById('flexSwitchCheckHint3').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint3').textContent = "Born in: Elkhart, Indiana, USA";
+document.getElementById('labelHint3').textContent = "Born in: Key West, Florida, USA";
 }
 });
 document.getElementById('flexSwitchCheckHint4').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint4').textContent = "Rookie Year Team: Seattle SuperSonics";
+document.getElementById('labelHint4').textContent = "Rookie Year Team: San Antonio Spurs";
 }
 });
 document.getElementById('flexSwitchCheckHint5').addEventListener('change', function() {
 if (this.checked) {
-document.getElementById('labelHint5').textContent = "For Fun: This player's powerful dunk over Alton Lister during a 1992 playoff game was colloquially known as The Lister Blister";
+document.getElementById('labelHint5').textContent = "For Fun: This player experienced a significant growth spurt in high school, growing from 5 ft 9 in to 6 ft 6 in between his junior and senior years. He graduated from the United States Naval Academy and served in the Navy for two years before pursuing his NBA career.";
 }
 });
 </script>
@@ -398,7 +398,7 @@ document.getElementById('labelHint5').textContent = "For Fun: This player's powe
 <script>
 // Logic to set up the table
 window.onload = function() {
-fetch('https://drewwolin.com/games/ntp/assets/stats/02-01-24.csv')
+fetch('https://drewwolin.com/games/ntp/assets/stats/02-02-24.csv')
 .then(response => response.text())
 .then(data => {
 const parsedData = Papa.parse(data, {
@@ -430,7 +430,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 const userInput = document.getElementById('playerName').value.trim();
 let resultsDiv = document.getElementById('results');
 
-if (userInput.toLowerCase() === 'shawn kemp') {
+if (userInput.toLowerCase() === 'david robinson') {
 // Display the "Correct Answer" modal
 const correctAnswerModal = $('#correctAnswerModal');
 

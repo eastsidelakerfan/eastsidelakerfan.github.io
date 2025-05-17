@@ -367,7 +367,7 @@ tr:hover {background-color: #D6EEEE;}
 
 
 window.onload = function() {
-    fetch('https://drewwolin.com/games/name-that-player/v2/data.csv')
+    fetch('https://eastsidelakerfan.github.io/games/name-that-player/v2/data.csv')
         .then(response => response.text())
         .then(data => {
             const parsedData = Papa.parse(data, {
@@ -426,7 +426,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 
     // Check the answer and display the result
 if (userInput.toLowerCase() === 'russell westbrook') {
-    resultsDiv.innerHTML = 'Success! <a href="https://drewwolin.com/games/name-that-player/v2/leaderboard.html">View Leaderboard</a>';
+    resultsDiv.innerHTML = 'Success! <a href="https://eastsidelakerfan.github.io/games/name-that-player/v2/leaderboard.html">View Leaderboard</a>';
     resultsDiv.style.color = 'green';
 
     let timeTaken = 120 - (minutes * 60 + seconds); // Assuming the initial time was 2 minutes (120 seconds)

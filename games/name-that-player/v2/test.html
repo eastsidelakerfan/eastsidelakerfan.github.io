@@ -272,7 +272,7 @@
 
 
 window.onload = function() {
-    fetch('https://drewwolin.com/games/name-that-player/v2/data.csv')
+    fetch('https://eastsidelakerfan.github.io/games/name-that-player/v2/data.csv')
         .then(response => response.text())
         .then(data => {
             const parsedData = Papa.parse(data, {
@@ -369,7 +369,7 @@ document.getElementById('playerName').addEventListener('input', function() {
 
     // If user input is 3 characters or more, fetch names and populate datalist
     if (inputValue.length >= 3) {
-        fetch('https://drewwolin.com/games/name-that-player/v2/autocomplete-names.txt')
+        fetch('https://eastsidelakerfan.github.io/games/name-that-player/v2/autocomplete-names.txt')
             .then(response => response.text())
             .then(data => {
                 const players = data.split('\n');

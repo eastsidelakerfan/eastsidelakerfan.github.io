@@ -1,4 +1,4 @@
 Are you open to a 15 minute Google Hangout chat?
 
 -For the basic form option, is it possible to write simple code like this?  https://www.w3schools.com/html/html_forms.asp
--I apologize for not providing this context up front, but the reason I need simple code is because I need to replicate this process over 100 entries.  Or are you able to help with this part too?  Here is another page where I will need to replicate this process: https://drewwolin.com/madlibs/madlibs2.html
+-I apologize for not providing this context up front, but the reason I need simple code is because I need to replicate this process over 100 entries.  Or are you able to help with this part too?  Here is another page where I will need to replicate this process: https://eastsidelakerfan.github.io/madlibs/madlibs2.html

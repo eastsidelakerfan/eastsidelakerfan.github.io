@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NBA Player Tiers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background-color: #f4f4f4;
+      margin: 0;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+    .left, .right {
+      flex: 1;
+      max-height: 90vh;
+      overflow-y: auto;
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .player-list h2,
+    .right h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-weight: 600;
+      text-align: center;
+    }
+    #players div {
+      margin-bottom: 8px;
+    }
+    select, button {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+    #tiers {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .tier-box {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      background: #fafafa;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .tier-box h3 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-weight: 700;
+      font-size: 18px;
+      color: #333;
+    }
+    .player-entry {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+    .player-entry img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ddd;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <div class="player-list">
+      <h2>Select NBA Players</h2>
+      <div id="players"></div>
+
+      <select id="tierSelect">
+        <option value="">-- Select Tier --</option>
+        <option value="1">Tier 1</option>
+        <option value="2">Tier 2</option>
+        <option value="3">Tier 3</option>
+        <option value="4">Tier 4</option>
+        <option value="5">Tier 5</option>
+        <option value="6">Tier 6</option>
+        <option value="7">Tier 7</option>
+        <option value="8">Tier 8</option>
+        <option value="9">Tier 9</option>
+        <option value="10">Tier 10</option>
+      </select>
+
+      <button onclick="assignTier()">Assign Tier</button>
+    </div>
+  </div>
+
+  <div class="right">
+    <h2>Player Tiers</h2>
+    <div id="tiers"></div>
+  </div>
+
+  <script>
+    const players = [
+      { name: "LeBron James", id: 2544 },
+      { name: "Nikola Jokic", id: 203999 },
+      { name: "Stephen Curry", id: 201939 },
+      { name: "Giannis Antetokounmpo", id: 203507 },
+      { name: "Kevin Durant", id: 201142 },
+      { name: "Luka Doncic", id: 1629029 },
+      { name: "Jayson Tatum", id: 1628369 },
+      { name: "Joel Embiid", id: 203954 },
+      { name: "Anthony Davis", id: 203076 },
+      { name: "Devin Booker", id: 1626164 }
+    ];
+
+    const playerContainer = document.getElementById("players");
+    players.forEach((player, index) => {
+      const div = document.createElement("div");
+      div.innerHTML = `<input type="checkbox" id="p${index}" value="${player.id}"> ${player.name}`;
+      playerContainer.appendChild(div);
+    });
+
+    const playerImageURL = (id) =>
+      `https://cdn.nba.com/headshots/nba/latest/1040x760/${id}.png`;
+
+    function assignTier() {
+      const selectedTier = document.getElementById("tierSelect").value;
+      if (!selectedTier) {
+        alert("Please select a tier.");
+        return;
+      }
+
+      const selectedPlayers = [];
+      players.forEach((player, index) => {
+        const checkbox = document.getElementById(`p${index}`);
+        if (checkbox.checked) {
+          selectedPlayers.push(player);
+          checkbox.checked = false;
+        }
+      });
+
+      if (selectedPlayers.length === 0) {
+        alert("Please select at least one player.");
+        return;
+      }
+
+      let tierBox = document.getElementById(`tier-${selectedTier}`);
+      if (!tierBox) {
+        tierBox = document.createElement("div");
+        tierBox.id = `tier-${selectedTier}`;
+        tierBox.className = "tier-box";
+        tierBox.innerHTML = `<h3>Tier ${selectedTier}</h3>`;
+        document.getElementById("tiers").appendChild(tierBox);
+      }
+
+      selectedPlayers.forEach(({ name, id }) => {
+        const div = document.createElement("div");
+        div.className = "player-entry";
+
+        const img = document.createElement("img");
+        img.src = playerImageURL(id);
+        img.alt = name;
+        img.onerror = () => {
+          img.src = "";
+          img.alt = "No image";
+        };
+
+        div.appendChild(img);
+        div.appendChild(document.createTextNode(name));
+        tierBox.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>
